@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("img/background4.jpg");
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3em;
+    align-self: center;
+}
+
+.Spielfeld {
+    margin: 1.5em;
+    display: flex;
+    padding: 2em;
+    flex-direction: column;
+    justify-content: right;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+
+.buttons button {
+    margin: 1em;
+    cursor: pointer;
+    background-color: whitesmoke;
+    border: none;
+    font-size: 1.8em;
+    padding: 15px, 32px;
+    border: 10px solid gray;
+    border-radius: 10px;
+}
+
+#handkarten {
+    border: 5px solid black;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+  
+#handkarte{
+    display: flex;
+    border: 5px solid red;
+    width: 15em;
+    height: 20em;
+    margin: 2em;
+    align-self: center;
+}
+
+#handkarte p {
+    background: green;
+}
+
+.ablegenundziehen {
+    display: flex;
+    flex-direction: row;
+    border: 10px solid green;
+    padding: 3em;
+    margin: 5em;
+    align-self: center;
+}
+  
+.ablegestapel {
+    border: 5px solid gray;
+    width: 15em;
+    height: 20em;
+}
+  
+.deck {
+    width: 15em;
+    height: 20em;
+}
+
+.kartenrücken {
+    width: 15em;
+    height: 20em;
+    cursor: pointer;
+}
