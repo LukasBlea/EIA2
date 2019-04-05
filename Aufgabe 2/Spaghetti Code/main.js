@@ -2,163 +2,163 @@ function getRandomInt(_max) {
     return Math.floor(Math.random() * Math.floor(_max));
 }
 let sK7 = {
-    farbe: "#040404",
-    zeichen: "kreuz",
+    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    zeichen: "♣",
     zahl: 7,
 };
 let sK8 = {
-    farbe: "#040404",
-    zeichen: "kreuz",
+    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    zeichen: "♣",
     zahl: 8,
 };
 let sK9 = {
-    farbe: "#040404",
-    zeichen: "kreuz",
+    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    zeichen: "♣",
     zahl: 9,
 };
 let sK10 = {
-    farbe: "#040404",
-    zeichen: "kreuz",
+    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    zeichen: "♣",
     zahl: 10,
 };
 let sKB = {
-    farbe: "#040404",
-    zeichen: "kreuz",
+    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    zeichen: "♣",
     zahl: 11,
 };
 let sKD = {
-    farbe: "#040404",
-    zeichen: "kreuz",
+    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    zeichen: "♣",
     zahl: 12,
 };
 let sKK = {
-    farbe: "#040404",
-    zeichen: "kreuz",
+    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    zeichen: "♣",
     zahl: 13,
 };
 let sKA = {
-    farbe: "#040404",
-    zeichen: "kreuz",
+    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    zeichen: "♣",
     zahl: 14,
 };
 let gP7 = {
-    farbe: "#31E72E",
-    zeichen: "pik",
+    farbe: '<p class="grüneKarte">Grün</p>',
+    zeichen: "♠",
     zahl: 7,
 };
 let gP8 = {
-    farbe: "#31E72E",
-    zeichen: "pik",
+    farbe: '<p class="grüneKarte">Grün</p>',
+    zeichen: "♠",
     zahl: 8,
 };
 let gP9 = {
-    farbe: "#31E72E",
-    zeichen: "pik",
+    farbe: '<p class="grüneKarte">Grün</p>',
+    zeichen: "♠",
     zahl: 9,
 };
 let gP10 = {
-    farbe: "#31E72E",
-    zeichen: "pik",
+    farbe: '<p class="grüneKarte">Grün</p>',
+    zeichen: "♠",
     zahl: 10,
 };
 let gPB = {
-    farbe: "#31E72E",
-    zeichen: "pik",
+    farbe: '<p class="grüneKarte">Grün</p>',
+    zeichen: "♠",
     zahl: 11,
 };
 let gPD = {
-    farbe: "#31E72E",
-    zeichen: "pik",
+    farbe: '<p class="grüneKarte">Grün</p>',
+    zeichen: "♠",
     zahl: 12,
 };
 let gPK = {
-    farbe: "#31E72E",
-    zeichen: "pik",
+    farbe: '<p class="grüneKarte">Grün</p>',
+    zeichen: "♠",
     zahl: 13,
 };
 let gPA = {
-    farbe: "#31E72E",
-    zeichen: "pik",
+    farbe: '<p class="grüneKarte">Grün</p>',
+    zeichen: "♠",
     zahl: 14,
 };
 let rH7 = {
-    farbe: "#EF1111",
-    zeichen: "herz",
+    farbe: '<p class="roteKarte">Rot</p>',
+    zeichen: "♥",
     zahl: 7,
 };
 let rH8 = {
-    farbe: "#EF1111",
-    zeichen: "herz",
+    farbe: '<p class="roteKarte">Rot</p>',
+    zeichen: "♥",
     zahl: 8,
 };
 let rH9 = {
-    farbe: "#EF1111",
-    zeichen: "herz",
+    farbe: '<p class="roteKarte">Rot</p>',
+    zeichen: "♥",
     zahl: 9,
 };
 let rH10 = {
-    farbe: "#EF1111",
-    zeichen: "herz",
+    farbe: '<p class="roteKarte">Rot</p>',
+    zeichen: "♥",
     zahl: 10,
 };
 let rHB = {
-    farbe: "#EF1111",
-    zeichen: "herz",
+    farbe: '<p class="roteKarte">Rot</p>',
+    zeichen: "♥",
     zahl: 11,
 };
 let rHD = {
-    farbe: "#EF1111",
-    zeichen: "herz",
+    farbe: '<p class="roteKarte">Rot</p>',
+    zeichen: "♥",
     zahl: 12,
 };
 let rHK = {
-    farbe: "#EF1111",
-    zeichen: "herz",
+    farbe: '<p class="roteKarte">Rot</p>',
+    zeichen: "♥",
     zahl: 13,
 };
 let rHA = {
-    farbe: "#EF1111",
-    zeichen: "herz",
+    farbe: '<p class="roteKarte">Rot</p>',
+    zeichen: "♥",
     zahl: 14,
 };
 let oK7 = {
-    farbe: "#F8A100",
-    zeichen: "karo",
+    farbe: '<p class="orangeKarte">Orange</p>',
+    zeichen: "♦",
     zahl: 7,
 };
 let oK8 = {
-    farbe: "#F8A100",
-    zeichen: "karo",
+    farbe: '<p class="orangeKarte">Orange</p>',
+    zeichen: "♦",
     zahl: 8,
 };
 let oK9 = {
-    farbe: "#F8A100",
-    zeichen: "karo",
+    farbe: '<p class="orangeKarte">Orange</p>',
+    zeichen: "♦",
     zahl: 9,
 };
 let oK10 = {
-    farbe: "#F8A100",
-    zeichen: "karo",
+    farbe: '<p class="orangeKarte">Orange</p>',
+    zeichen: "♦",
     zahl: 10,
 };
 let oKB = {
-    farbe: "#F8A100",
-    zeichen: "karo",
+    farbe: '<p class="orangeKarte">Orange</p>',
+    zeichen: "♦",
     zahl: 11,
 };
 let oKD = {
-    farbe: "#F8A100",
-    zeichen: "karo",
+    farbe: '<p class="orangeKarte">Orange</p>',
+    zeichen: "♦",
     zahl: 12,
 };
 let oKK = {
-    farbe: "#F8A100",
-    zeichen: "karo",
+    farbe: '<p class="orangeKarte">Orange</p>',
+    zeichen: "♦",
     zahl: 13,
 };
 let oKA = {
-    farbe: "#F8A100",
-    zeichen: "karo",
+    farbe: '<p class="orangeKarte">Orange</p>',
+    zeichen: "♦",
     zahl: 14,
 };
 let deck = [sK7, sK8, sK9, sK10, sKB, sKD, sKK, sKA, gP7, gP8, gP9, gP10, gPB, gPD, gPK, gPA, rH7, rH8, rH9, rH10, rHB, rHD, rHK, rHA, oK7, oK8, oK9, oK10, oKB, oKD, oKK, oKA];
@@ -174,7 +174,7 @@ function startKarten(deck, kartenanzahl, i) {
         case "1":
             {
                 handkarten = deck.splice(0, 1);
-                writeHTML(handkarten[i], "handkarte");
+                writeHTML(handkarten[i], "handkarten");
             }
             break;
         case "2":
@@ -183,7 +183,7 @@ function startKarten(deck, kartenanzahl, i) {
                 console.log(handkarten);
             }
             while (handkarten.length > i) {
-                writeHTML(handkarten[i], "handkarte");
+                writeHTML(handkarten[i], "handkarten");
                 i++;
             }
             break;
@@ -193,7 +193,7 @@ function startKarten(deck, kartenanzahl, i) {
                 console.log(handkarten);
             }
             while (handkarten.length > i) {
-                writeHTML(handkarten[i], "handkarte");
+                writeHTML(handkarten[i], "handkarten");
                 i++;
             }
             break;
@@ -203,7 +203,7 @@ function startKarten(deck, kartenanzahl, i) {
                 console.log(handkarten);
             }
             while (handkarten.length > i) {
-                writeHTML(handkarten[i], "handkarte");
+                writeHTML(handkarten[i], "handkarten");
                 i++;
             }
             break;
@@ -213,7 +213,7 @@ function startKarten(deck, kartenanzahl, i) {
                 console.log(handkarten);
             }
             while (handkarten.length > i) {
-                writeHTML(handkarten[i], "handkarte");
+                writeHTML(handkarten[i], "handkarten");
                 i++;
             }
             break;
@@ -232,17 +232,17 @@ function deckMischen() {
     console.log(deck);
     spielStart(deck);
 }
-function karteZiehen(i) {
+function karteZiehen(i, handkarten) {
     i = 0;
-    let ziehen = deck.pop();
-    let handkarte = ziehen;
+    let ziehen = deck.splice(0, 1);
+    handkarten = handkarten.concat(ziehen);
     while (i == 0) {
         if (deck.length == 0) {
             console.log("Es kann keine Karte mehr gezogen werden");
         }
         else {
-            handkarte;
-            console.log("Gezogene Karte:", handkarte);
+            handkarten;
+            console.log("Gezogene Karte:", handkarten);
         }
         i++;
     }
@@ -251,9 +251,9 @@ function writeHTML(handkarte, htmlID) {
     let prodElement = document.createElement('div');
     let elementstring = `
     <div id="handkarte">
-        <p>${handkarte.zeichen}</p>
-        <p>${handkarte.zahl}</p>
-        <p>${handkarte.farbe}</p>
+        <p class="zeichen">${handkarte.zeichen}</p>
+        <p class="zahl">${handkarte.zahl}</p>
+        ${handkarte.farbe}
     </div>
     `;
     prodElement.innerHTML = elementstring;

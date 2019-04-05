@@ -9,194 +9,194 @@ interface Karte {
 }
 
 let sK7: Karte = {
-    farbe: "#040404",
-    zeichen: "kreuz",
+    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    zeichen: "♣",
     zahl: 7,
 }
 
 let sK8: Karte = {
-    farbe: "#040404",
-    zeichen: "kreuz",
+    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    zeichen: "♣",
     zahl: 8,
 }
 
 let sK9: Karte = {
-    farbe: "#040404",
-    zeichen: "kreuz",
+    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    zeichen: "♣",
     zahl: 9,
 }
 
 let sK10: Karte = {
-    farbe: "#040404",
-    zeichen: "kreuz",
+    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    zeichen: "♣",
     zahl: 10,
 }
 
 let sKB: Karte = {
-    farbe: "#040404",
-    zeichen: "kreuz",
+    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    zeichen: "♣",
     zahl: 11,
 }
 
 let sKD: Karte = {
-    farbe: "#040404",
-    zeichen: "kreuz",
+    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    zeichen: "♣",
     zahl: 12,
 }
 
 let sKK: Karte = {
-    farbe: "#040404",
-    zeichen: "kreuz",
+    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    zeichen: "♣",
     zahl: 13,
 }
 
 let sKA: Karte = {
-    farbe: "#040404",
-    zeichen: "kreuz",
+    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    zeichen: "♣",
     zahl: 14,
 }
 
 let gP7: Karte = {
-    farbe: "#31E72E",
-    zeichen: "pik",
+    farbe: '<p class="grüneKarte">Grün</p>',
+    zeichen: "♠",
     zahl: 7,
 }
 
 let gP8: Karte = {
-    farbe: "#31E72E",
-    zeichen: "pik",
+    farbe: '<p class="grüneKarte">Grün</p>',
+    zeichen: "♠",
     zahl: 8,
 }
 
 let gP9: Karte = {
-    farbe: "#31E72E",
-    zeichen: "pik",
+    farbe: '<p class="grüneKarte">Grün</p>',
+    zeichen: "♠",
     zahl: 9,
 }
 
 let gP10: Karte = {
-    farbe: "#31E72E",
-    zeichen: "pik",
+    farbe: '<p class="grüneKarte">Grün</p>',
+    zeichen: "♠",
     zahl: 10,
 }
 
 let gPB: Karte = {
-    farbe: "#31E72E",
-    zeichen: "pik",
+    farbe: '<p class="grüneKarte">Grün</p>',
+    zeichen: "♠",
     zahl: 11,
 }
 
 let gPD: Karte = {
-    farbe: "#31E72E",
-    zeichen: "pik",
+    farbe: '<p class="grüneKarte">Grün</p>',
+    zeichen: "♠",
     zahl: 12,
 }
 
 let gPK: Karte = {
-    farbe: "#31E72E",
-    zeichen: "pik",
+    farbe: '<p class="grüneKarte">Grün</p>',
+    zeichen: "♠",
     zahl: 13,
 }
 
 let gPA: Karte = {
-    farbe: "#31E72E",
-    zeichen: "pik",
+    farbe: '<p class="grüneKarte">Grün</p>',
+    zeichen: "♠",
     zahl: 14,
 }
 
 let rH7: Karte = {
-    farbe: "#EF1111",
-    zeichen: "herz",
+    farbe: '<p class="roteKarte">Rot</p>',
+    zeichen: "♥",
     zahl: 7,
 }
 
 let rH8: Karte = {
-    farbe: "#EF1111",
-    zeichen: "herz",
+    farbe: '<p class="roteKarte">Rot</p>',
+    zeichen: "♥",
     zahl: 8,
 }
 
 let rH9: Karte = {
-    farbe: "#EF1111",
-    zeichen: "herz",
+    farbe: '<p class="roteKarte">Rot</p>',
+    zeichen: "♥",
     zahl: 9,
 }
 
 let rH10: Karte = {
-    farbe: "#EF1111",
-    zeichen: "herz",
+    farbe: '<p class="roteKarte">Rot</p>',
+    zeichen: "♥",
     zahl: 10,
 }
 
 let rHB: Karte = {
-    farbe: "#EF1111",
-    zeichen: "herz",
+    farbe: '<p class="roteKarte">Rot</p>',
+    zeichen: "♥",
     zahl: 11,
 }
 
 let rHD: Karte = {
-    farbe: "#EF1111",
-    zeichen: "herz",
+    farbe: '<p class="roteKarte">Rot</p>',
+    zeichen: "♥",
     zahl: 12,
 }
 
 let rHK: Karte = {
-    farbe: "#EF1111",
-    zeichen: "herz",
+    farbe: '<p class="roteKarte">Rot</p>',
+    zeichen: "♥",
     zahl: 13,
 }
 
 let rHA: Karte = {
-    farbe: "#EF1111",
-    zeichen: "herz",
+    farbe: '<p class="roteKarte">Rot</p>',
+    zeichen: "♥",
     zahl: 14,
 }
 
 let oK7: Karte = {
-    farbe: "#F8A100",
-    zeichen: "karo",
+    farbe: '<p class="orangeKarte">Orange</p>',
+    zeichen: "♦",
     zahl: 7,
 }
 
 let oK8: Karte = {
-    farbe: "#F8A100",
-    zeichen: "karo",
+    farbe: '<p class="orangeKarte">Orange</p>',
+    zeichen: "♦",
     zahl: 8,
 }
 
 let oK9: Karte = {
-    farbe: "#F8A100",
-    zeichen: "karo",
+    farbe: '<p class="orangeKarte">Orange</p>',
+    zeichen: "♦",
     zahl: 9,
 }
 
 let oK10: Karte = {
-    farbe: "#F8A100",
-    zeichen: "karo",
+    farbe: '<p class="orangeKarte">Orange</p>',
+    zeichen: "♦",
     zahl: 10,
 }
 
 let oKB: Karte = {
-    farbe: "#F8A100",
-    zeichen: "karo",
+    farbe: '<p class="orangeKarte">Orange</p>',
+    zeichen: "♦",
     zahl: 11,
 }
 
 let oKD: Karte = {
-    farbe: "#F8A100",
-    zeichen: "karo",
+    farbe: '<p class="orangeKarte">Orange</p>',
+    zeichen: "♦",
     zahl: 12,
 }
 
 let oKK: Karte = {
-    farbe: "#F8A100",
-    zeichen: "karo",
+    farbe: '<p class="orangeKarte">Orange</p>',
+    zeichen: "♦",
     zahl: 13,
 }
 
 let oKA: Karte = {
-    farbe: "#F8A100",
-    zeichen: "karo",
+    farbe: '<p class="orangeKarte">Orange</p>',
+    zeichen: "♦",
     zahl: 14,
 }
 
@@ -215,7 +215,7 @@ function startKarten(deck: Karte[], kartenanzahl: string, i: number){
     switch (kartenanzahl) {
         case "1": {
             handkarten = deck.splice(0, 1);
-            writeHTML(handkarten[i], "handkarte");
+            writeHTML(handkarten[i], "handkarten");
         }
         break;
         case "2": {
@@ -223,7 +223,7 @@ function startKarten(deck: Karte[], kartenanzahl: string, i: number){
             console.log(handkarten);
         }
         while (handkarten.length > i) {
-            writeHTML(handkarten[i], "handkarte");
+            writeHTML(handkarten[i], "handkarten");
             i++;
         }
         break;
@@ -232,7 +232,7 @@ function startKarten(deck: Karte[], kartenanzahl: string, i: number){
             console.log(handkarten);
         }
         while (handkarten.length > i) {
-            writeHTML(handkarten[i], "handkarte");
+            writeHTML(handkarten[i], "handkarten");
             i++;
         }
         break;
@@ -241,7 +241,7 @@ function startKarten(deck: Karte[], kartenanzahl: string, i: number){
             console.log(handkarten);
         }
         while (handkarten.length > i) {
-            writeHTML(handkarten[i], "handkarte");
+            writeHTML(handkarten[i], "handkarten");
             i++;
         }
         break;
@@ -250,7 +250,7 @@ function startKarten(deck: Karte[], kartenanzahl: string, i: number){
             console.log(handkarten);
             }
             while (handkarten.length > i) {
-                writeHTML(handkarten[i], "handkarte");
+                writeHTML(handkarten[i], "handkarten");
                 i++;
             }
             break;
@@ -291,9 +291,9 @@ function writeHTML(handkarte: Karte, htmlID: string) {
     let elementstring = 
     `
     <div id="handkarte">
-        <p>${handkarte.zeichen}</p>
-        <p>${handkarte.zahl}</p>
-        <p>${handkarte.farbe}</p>
+        <p class="zeichen">${handkarte.zeichen}</p>
+        <p class="zahl">${handkarte.zahl}</p>
+        ${handkarte.farbe}
     </div>
     `
     prodElement.innerHTML = elementstring;
