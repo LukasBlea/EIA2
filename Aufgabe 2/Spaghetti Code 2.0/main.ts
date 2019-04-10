@@ -1,7 +1,3 @@
-function getRandomInt(_max: number) {
-    return Math.floor(Math.random() * Math.floor(_max));
-}
-
 interface Karte {
     farbe: string;
     zeichen: string;
@@ -9,7 +5,7 @@ interface Karte {
 }
 
 let sK7: Karte = {
-    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    farbe: '<p class="schwarzeKarte" target="click" >Schwarz</p>',
     zeichen: "♣",
     zahl: 7,
 }
@@ -56,50 +52,50 @@ let sKA: Karte = {
     zahl: 14,
 }
 
-let gP7: Karte = {
-    farbe: '<p class="grüneKarte">Grün</p>',
+let sP7: Karte = {
+    farbe: '<p class="schwarzeKarte">Schwarz</p>',
     zeichen: "♠",
     zahl: 7,
 }
 
-let gP8: Karte = {
-    farbe: '<p class="grüneKarte">Grün</p>',
+let sP8: Karte = {
+    farbe: '<p class="schwarzeKarte">Schwarz</p>',
     zeichen: "♠",
     zahl: 8,
 }
 
-let gP9: Karte = {
-    farbe: '<p class="grüneKarte">Grün</p>',
+let sP9: Karte = {
+    farbe: '<p class="schwarzeKarte">Schwarz</p>',
     zeichen: "♠",
     zahl: 9,
 }
 
-let gP10: Karte = {
-    farbe: '<p class="grüneKarte">Grün</p>',
+let sP10: Karte = {
+    farbe: '<p class="schwarzeKarte">Schwarz</p>',
     zeichen: "♠",
     zahl: 10,
 }
 
-let gPB: Karte = {
-    farbe: '<p class="grüneKarte">Grün</p>',
+let sPB: Karte = {
+    farbe: '<p class="schwarzeKarte">Schwarz</p>',
     zeichen: "♠",
     zahl: 11,
 }
 
-let gPD: Karte = {
-    farbe: '<p class="grüneKarte">Grün</p>',
+let sPD: Karte = {
+    farbe: '<p class="schwarzeKarte">Schwarz</p>',
     zeichen: "♠",
     zahl: 12,
 }
 
-let gPK: Karte = {
-    farbe: '<p class="grüneKarte">Grün</p>',
+let sPK: Karte = {
+    farbe: '<p class="schwarzeKarte">Schwarz</p>',
     zeichen: "♠",
     zahl: 13,
 }
 
-let gPA: Karte = {
-    farbe: '<p class="grüneKarte">Grün</p>',
+let sPA: Karte = {
+    farbe: '<p class="schwarzeKarte">Schwarz</p>',
     zeichen: "♠",
     zahl: 14,
 }
@@ -152,102 +148,104 @@ let rHA: Karte = {
     zahl: 14,
 }
 
-let oK7: Karte = {
-    farbe: '<p class="orangeKarte">Orange</p>',
+let rK7: Karte = {
+    farbe: '<p class="roteKarte">Rot</p>',
     zeichen: "♦",
     zahl: 7,
 }
 
-let oK8: Karte = {
-    farbe: '<p class="orangeKarte">Orange</p>',
+let rK8: Karte = {
+    farbe: '<p class="roteKarte">Rot</p>',
     zeichen: "♦",
     zahl: 8,
 }
 
-let oK9: Karte = {
-    farbe: '<p class="orangeKarte">Orange</p>',
+let rK9: Karte = {
+    farbe: '<p class="roteKarte">Rot</p>',
     zeichen: "♦",
     zahl: 9,
 }
 
-let oK10: Karte = {
-    farbe: '<p class="orangeKarte">Orange</p>',
+let rK10: Karte = {
+    farbe: '<p class="roteKarte">Rot</p>',
     zeichen: "♦",
     zahl: 10,
 }
 
-let oKB: Karte = {
-    farbe: '<p class="orangeKarte">Orange</p>',
+let rKB: Karte = {
+    farbe: '<p class="roteKarte">Rot</p>',
     zeichen: "♦",
     zahl: 11,
 }
 
-let oKD: Karte = {
-    farbe: '<p class="orangeKarte">Orange</p>',
+let rKD: Karte = {
+    farbe: '<p class="roteKarte">Rot</p>',
     zeichen: "♦",
     zahl: 12,
 }
 
-let oKK: Karte = {
-    farbe: '<p class="orangeKarte">Orange</p>',
+let rKK: Karte = {
+    farbe: '<p class="roteKarte">Rot</p>',
     zeichen: "♦",
     zahl: 13,
 }
 
-let oKA: Karte = {
-    farbe: '<p class="orangeKarte">Orange</p>',
+let rKA: Karte = {
+    farbe: '<p class="roteKarte">Rot</p>',
     zeichen: "♦",
     zahl: 14,
 }
 
-let deck: Karte [] = [sK7, sK8, sK9, sK10, sKB, sKD, sKK, sKA, gP7, gP8, gP9, gP10, gPB, gPD, gPK, gPA, rH7, rH8, rH9, rH10, rHB, rHD, rHK, rHA, oK7, oK8, oK9, oK10, oKB, oKD, oKK, oKA]
-
+let deck: Karte[] = [sK7, sK8, sK9, sK10, sKB, sKD, sKK, sKA, sP7, sP8, sP9, sP10, sPB, sPD, sPK, sPA, rH7, rH8, rH9, rH10, rHB, rHD, rHK, rHA, rK7, rK8, rK9, rK10, rKB, rKD, rKK, rKA]
+let handkarten: Karte[] = []
 document.addEventListener("DOMContentLoaded", deckMischen)
 
 function spielStart(deck: Karte[]) {
-let kartenanzahl = prompt("Wie viele Karten hättest du gerne? (1-5 Karten)");
-startKarten(deck, kartenanzahl, 0);
+    let kartenanzahl = prompt("Wie viele Karten hättest du gerne? (1-5 Karten)");
+    startKarten(deck, kartenanzahl, 0);
 }
 
-function startKarten(deck: Karte[], kartenanzahl: string, i: number): Karte[]{
+function startKarten(deck: Karte[], kartenanzahl: string, i: number): Karte[] {
     let handkarten: Karte[];
     switch (kartenanzahl) {
         case "1": {
             handkarten = deck.splice(0, 1);
+            console.log(handkarten);
             writeHTML(handkarten[i], "handkarten");
         }
-        break;
+            break;
         case "2": {
             handkarten = deck.splice(0, 2);
             console.log(handkarten);
         }
-        while (handkarten.length > i) {
-            writeHTML(handkarten[i], "handkarten");
-            i++;
-        }
-        break;
+            while (handkarten.length > i) {
+                writeHTML(handkarten[i], "handkarten");
+                i++;
+            }
+            break;
         case "3": {
             handkarten = deck.splice(0, 3);
             console.log(handkarten);
         }
-        while (handkarten.length > i) {
-            writeHTML(handkarten[i], "handkarten");
-            i++;
-        }
-        break;
+            while (handkarten.length > i) {
+                writeHTML(handkarten[i], "handkarten");
+                i++;
+            }
+            break;
         case "4": {
             handkarten = deck.splice(0, 4);
             console.log(handkarten);
         }
-        while (handkarten.length > i) {
-            writeHTML(handkarten[i], "handkarten");
-            i++;
-        }
-        break;
+            while (handkarten.length > i) {
+                writeHTML(handkarten[i], "handkarten");
+                i++;
+            }
+            break;
+        default:
         case "5": {
             handkarten = deck.splice(0, 5);
             console.log(handkarten);
-            }
+        }
             while (handkarten.length > i) {
                 writeHTML(handkarten[i], "handkarten");
                 i++;
@@ -260,12 +258,12 @@ function startKarten(deck: Karte[], kartenanzahl: string, i: number): Karte[]{
     return handkarten;
 }
 
-function deckMischen(){
+function deckMischen() {
     let zähler = deck.length;
     while (zähler > 0) {
-        let index: number = Math.floor(Math.random()*zähler);
+        let index: number = Math.floor(Math.random() * zähler);
         zähler--;
-        let temp: any = deck[zähler];
+        let temp: Karte = deck[zähler];
         deck[zähler] = deck[index];
         deck[index] = temp;
     }
@@ -274,15 +272,15 @@ function deckMischen(){
 }
 
 // Work in progress
-function karteZiehen(handkarten: Karte[]) {
+function karteZiehen(_handkarten: Karte[]) {
     let i: number = 0;
     let ziehen = deck.pop();
     handkarten = handkarten.concat(ziehen);
     while (i == 0) {
         if (deck.length == 0) {
-        console.log("Es kann keine Karte mehr gezogen werden");
+            console.log("Es kann keine Karte mehr gezogen werden");
         } else {
-            handkarten; 
+            handkarten;
             console.log("Gezogene Karte:", handkarten);
         }
         i++;
@@ -293,8 +291,8 @@ function karteZiehen(handkarten: Karte[]) {
 
 function writeHTML(handkarte: Karte, htmlID: string) {
     let prodElement = document.createElement('div');
-    let elementstring = 
-    `
+    let elementstring =
+        `
     <div id="handkarte">
         <p class="zeichen">${handkarte.zeichen}</p>
         <p class="zahl">${handkarte.zahl}</p>
