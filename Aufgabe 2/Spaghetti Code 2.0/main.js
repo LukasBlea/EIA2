@@ -1,167 +1,169 @@
 let sK7 = {
-    farbe: '<p class="schwarzeKarte" target="click" >Schwarz</p>',
+    farbe: "<p class='schwarzeKarte' target='click' >Schwarz</p>",
     zeichen: "♣",
-    zahl: 7,
+    zahl: 7
 };
 let sK8 = {
-    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♣",
-    zahl: 8,
+    zahl: 8
 };
 let sK9 = {
-    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♣",
-    zahl: 9,
+    zahl: 9
 };
 let sK10 = {
-    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♣",
-    zahl: 10,
+    zahl: 10
 };
 let sKB = {
-    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♣",
-    zahl: 11,
+    zahl: 11
 };
 let sKD = {
-    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♣",
-    zahl: 12,
+    zahl: 12
 };
 let sKK = {
-    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♣",
-    zahl: 13,
+    zahl: 13
 };
 let sKA = {
-    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♣",
-    zahl: 14,
+    zahl: 14
 };
 let sP7 = {
-    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    farbe: "ztfigfi>",
     zeichen: "♠",
-    zahl: 7,
+    zahl: 7
 };
 let sP8 = {
-    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♠",
-    zahl: 8,
+    zahl: 8
 };
 let sP9 = {
-    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♠",
-    zahl: 9,
+    zahl: 9
 };
 let sP10 = {
-    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♠",
-    zahl: 10,
+    zahl: 10
 };
 let sPB = {
-    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♠",
-    zahl: 11,
+    zahl: 11
 };
 let sPD = {
-    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♠",
-    zahl: 12,
+    zahl: 12
 };
 let sPK = {
-    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♠",
-    zahl: 13,
+    zahl: 13
 };
 let sPA = {
-    farbe: '<p class="schwarzeKarte">Schwarz</p>',
+    farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♠",
-    zahl: 14,
+    zahl: 14
 };
 let rH7 = {
-    farbe: '<p class="roteKarte">Rot</p>',
+    farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♥",
-    zahl: 7,
+    zahl: 7
 };
 let rH8 = {
-    farbe: '<p class="roteKarte">Rot</p>',
+    farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♥",
-    zahl: 8,
+    zahl: 8
 };
 let rH9 = {
-    farbe: '<p class="roteKarte">Rot</p>',
+    farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♥",
-    zahl: 9,
+    zahl: 9
 };
 let rH10 = {
-    farbe: '<p class="roteKarte">Rot</p>',
+    farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♥",
-    zahl: 10,
+    zahl: 10
 };
 let rHB = {
-    farbe: '<p class="roteKarte">Rot</p>',
+    farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♥",
-    zahl: 11,
+    zahl: 11
 };
 let rHD = {
-    farbe: '<p class="roteKarte">Rot</p>',
+    farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♥",
-    zahl: 12,
+    zahl: 12
 };
 let rHK = {
-    farbe: '<p class="roteKarte">Rot</p>',
+    farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♥",
-    zahl: 13,
+    zahl: 13
 };
 let rHA = {
-    farbe: '<p class="roteKarte">Rot</p>',
+    farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♥",
-    zahl: 14,
+    zahl: 14
 };
 let rK7 = {
-    farbe: '<p class="roteKarte">Rot</p>',
+    farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♦",
-    zahl: 7,
+    zahl: 7
 };
 let rK8 = {
-    farbe: '<p class="roteKarte">Rot</p>',
+    farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♦",
-    zahl: 8,
+    zahl: 8
 };
 let rK9 = {
-    farbe: '<p class="roteKarte">Rot</p>',
+    farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♦",
-    zahl: 9,
+    zahl: 9
 };
 let rK10 = {
-    farbe: '<p class="roteKarte">Rot</p>',
+    farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♦",
-    zahl: 10,
+    zahl: 10
 };
 let rKB = {
-    farbe: '<p class="roteKarte">Rot</p>',
+    farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♦",
-    zahl: 11,
+    zahl: 11
 };
 let rKD = {
-    farbe: '<p class="roteKarte">Rot</p>',
+    farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♦",
-    zahl: 12,
+    zahl: 12
 };
 let rKK = {
-    farbe: '<p class="roteKarte">Rot</p>',
+    farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♦",
-    zahl: 13,
+    zahl: 13
 };
 let rKA = {
-    farbe: '<p class="roteKarte">Rot</p>',
+    farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♦",
-    zahl: 14,
+    zahl: 14
 };
 let deck = [sK7, sK8, sK9, sK10, sKB, sKD, sKK, sKA, sP7, sP8, sP9, sP10, sPB, sPD, sPK, sPA, rH7, rH8, rH9, rH10, rHB, rHD, rHK, rHA, rK7, rK8, rK9, rK10, rKB, rKD, rKK, rKA];
 let handkarten = [];
 document.addEventListener("DOMContentLoaded", deckMischen);
+// tslint:disable-next-line:typedef
 function spielStart(deck) {
+    // tslint:disable-next-line:typedef
     let kartenanzahl = prompt("Wie viele Karten hättest du gerne? (1-5 Karten)");
     startKarten(deck, kartenanzahl, 0);
 }
@@ -222,7 +224,9 @@ function startKarten(deck, kartenanzahl, i) {
     //Würde funktionieren aber an falscher Stelle. Unsicher wie ich dies am besten implementieren könnte.
     return handkarten;
 }
+// tslint:disable-next-line:typedef
 function deckMischen() {
+    // tslint:disable-next-line:typedef
     let zähler = deck.length;
     while (zähler > 0) {
         let index = Math.floor(Math.random() * zähler);
@@ -235,8 +239,10 @@ function deckMischen() {
     spielStart(deck);
 }
 // Work in progress
+// tslint:disable-next-line:typedef
 function karteZiehen(_handkarten) {
     let i = 0;
+    // tslint:disable-next-line:typedef
     let ziehen = deck.pop();
     handkarten = handkarten.concat(ziehen);
     while (i == 0) {
@@ -244,6 +250,7 @@ function karteZiehen(_handkarten) {
             console.log("Es kann keine Karte mehr gezogen werden");
         }
         else {
+            // tslint:disable-next-line:no-unused-expression
             handkarten;
             console.log("Gezogene Karte:", handkarten);
         }
@@ -252,8 +259,11 @@ function karteZiehen(_handkarten) {
     }
 }
 //
+// tslint:disable-next-line:typedef
 function writeHTML(handkarte, htmlID) {
-    let prodElement = document.createElement('div');
+    // tslint:disable-next-line:typedef
+    let prodElement = document.createElement("div");
+    // tslint:disable-next-line:typedef
     let elementstring = `
     <div id="handkarte">
         <p class="zeichen">${handkarte.zeichen}</p>
