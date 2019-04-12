@@ -53,7 +53,7 @@ let sKA: Karte = {
 };
 
 let sP7: Karte = {
-    farbe: "ztfigfi>",
+    farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♠",
     zahl: 7
 };
@@ -200,15 +200,26 @@ let deck: Karte[] = [sK7, sK8, sK9, sK10, sKB, sKD, sKK, sKA, sP7, sP8, sP9, sP1
 let handkarten: Karte[] = [];
 document.addEventListener("DOMContentLoaded", deckMischen);
 
-// tslint:disable-next-line:typedef
-function spielStart(deck: Karte[]) {
-    // tslint:disable-next-line:typedef
-    let kartenanzahl = prompt("Wie viele Karten hättest du gerne? (1-5 Karten)");
-    startKarten(deck, kartenanzahl, 0);
+function deckMischen(): void {
+    let zähler: number = deck.length;
+    while (zähler > 0) {
+        let index: number = Math.floor(Math.random() * zähler);
+        zähler--;
+        let temp: Karte = deck[zähler];
+        deck[zähler] = deck[index];
+        deck[index] = temp;
+    }
+    console.log(deck);
+    spielStart();
 }
 
-function startKarten(deck: Karte[], kartenanzahl: string, i: number): Karte[] {
-    let handkarten: Karte[];
+function spielStart(): void {
+    let kartenanzahl: string = prompt("Wie viele Karten hättest du gerne? (1-5 Karten)");
+    startKarten(kartenanzahl);
+}
+
+function startKarten(kartenanzahl: string): void {
+    let i: number = 0;
     switch (kartenanzahl) {
         case "1": {
             handkarten = deck.splice(0, 1);
@@ -255,51 +266,10 @@ function startKarten(deck: Karte[], kartenanzahl: string, i: number): Karte[] {
                   break;
     }
     console.log("Alles erfolgreich generiert.");
-    // karteZiehen(handkarten);
-    //Würde funktionieren aber an falscher Stelle. Unsicher wie ich dies am besten implementieren könnte.
-    return handkarten;
 }
 
-// tslint:disable-next-line:typedef
-function deckMischen() {
-    // tslint:disable-next-line:typedef
-    let zähler = deck.length;
-    while (zähler > 0) {
-        let index: number = Math.floor(Math.random() * zähler);
-        zähler--;
-        let temp: Karte = deck[zähler];
-        deck[zähler] = deck[index];
-        deck[index] = temp;
-    }
-    console.log(deck);
-    spielStart(deck);
-}
-
-// Work in progress
-// tslint:disable-next-line:typedef
-function karteZiehen(_handkarten: Karte[]) {
-    let i: number = 0;
-    // tslint:disable-next-line:typedef
-    let ziehen = deck.pop();
-    handkarten = handkarten.concat(ziehen);
-    while (i == 0) {
-        if (deck.length == 0) {
-            console.log("Es kann keine Karte mehr gezogen werden");
-        } else {
-            // tslint:disable-next-line:no-unused-expression
-            handkarten;
-            console.log("Gezogene Karte:", handkarten);
-        }
-        i++;
-        console.log(handkarten);
-    }
-}
-//
-
-// tslint:disable-next-line:typedef
-function writeHTML(handkarte: Karte, htmlID: string) {
-    // tslint:disable-next-line:typedef
-    let prodElement = document.createElement("div");
+function writeHTML(handkarte: Karte, htmlID: string): void {
+    let prodElement: HTMLDivElement = document.createElement("div");
     // tslint:disable-next-line:typedef
     let elementstring =
     `
@@ -311,6 +281,21 @@ function writeHTML(handkarte: Karte, htmlID: string) {
     `;
     prodElement.innerHTML = elementstring;
     document.getElementById(htmlID).appendChild(prodElement);
+}
+
+function karteZiehen(_handkarten: Karte[]): void {
+    let i: number = 0;
+    let ziehen: Karte = deck.pop();
+    handkarten = handkarten.concat(ziehen);
+    while (i == 0) {
+        if (deck.length == 0) {
+            console.log("Es kann keine Karte mehr gezogen werden");
+        } else {
+            console.log("Gezogene Karte:", handkarten);
+        }
+        i++;
+        console.log(handkarten);
+    }
 }
 
 // In Zusammenarbeit mit Elisabeth Haase
