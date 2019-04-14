@@ -2,203 +2,243 @@ interface Karte {
     farbe: string;
     zeichen: string;
     zahl: number;
+    rang: number;
 }
 
 let sK7: Karte = {
     farbe: "<p class='schwarzeKarte' target='click' >Schwarz</p>",
     zeichen: "♣",
-    zahl: 7
+    zahl: 7,
+    rang: 1
 };
 
 let sK8: Karte = {
     farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♣",
-    zahl: 8
+    zahl: 8,
+    rang: 2
 };
 
 let sK9: Karte = {
     farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♣",
-    zahl: 9
+    zahl: 9,
+    rang: 3
 };
 
 let sK10: Karte = {
     farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♣",
-    zahl: 10
+    zahl: 10,
+    rang: 4
 };
 
 let sKB: Karte = {
     farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♣",
-    zahl: 11
+    zahl: 11,
+    rang: 5
 };
 
 let sKD: Karte = {
     farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♣",
-    zahl: 12
+    zahl: 12,
+    rang: 6
 };
 
 let sKK: Karte = {
     farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♣",
-    zahl: 13
+    zahl: 13,
+    rang: 7
 };
 
 let sKA: Karte = {
     farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♣",
-    zahl: 14
+    zahl: 14,
+    rang: 8
 };
 
 let sP7: Karte = {
     farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♠",
-    zahl: 7
+    zahl: 7,
+    rang: 9
 };
 
 let sP8: Karte = {
     farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♠",
-    zahl: 8
+    zahl: 8,
+    rang: 10
 };
 
 let sP9: Karte = {
     farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♠",
-    zahl: 9
+    zahl: 9,
+    rang: 11
 };
 
 let sP10: Karte = {
     farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♠",
-    zahl: 10
+    zahl: 10,
+    rang: 12
 };
 
 let sPB: Karte = {
     farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♠",
-    zahl: 11
+    zahl: 11,
+    rang: 13
 };
 
 let sPD: Karte = {
     farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♠",
-    zahl: 12
+    zahl: 12,
+    rang: 14
 };
 
 let sPK: Karte = {
     farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♠",
-    zahl: 13
+    zahl: 13,
+    rang: 15
 };
 
 let sPA: Karte = {
     farbe: "<p class='schwarzeKarte'>Schwarz</p>",
     zeichen: "♠",
-    zahl: 14
+    zahl: 14,
+    rang: 16
 };
 
 let rH7: Karte = {
     farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♥",
-    zahl: 7
+    zahl: 7,
+    rang: 17
 };
 
 let rH8: Karte = {
     farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♥",
-    zahl: 8
+    zahl: 8,
+    rang: 18
 };
 
 let rH9: Karte = {
     farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♥",
-    zahl: 9
+    zahl: 9,
+    rang: 19
 };
 
 let rH10: Karte = {
     farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♥",
-    zahl: 10
+    zahl: 10,
+    rang: 20
 };
 
 let rHB: Karte = {
     farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♥",
-    zahl: 11
+    zahl: 11,
+    rang: 21
 };
 
 let rHD: Karte = {
     farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♥",
-    zahl: 12
+    zahl: 12,
+    rang: 22
 };
 
 let rHK: Karte = {
     farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♥",
-    zahl: 13
+    zahl: 13,
+    rang: 23
 };
 
 let rHA: Karte = {
     farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♥",
-    zahl: 14
+    zahl: 14,
+    rang: 24
 };
 
 let rK7: Karte = {
     farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♦",
-    zahl: 7
+    zahl: 7,
+    rang: 25
 };
 
 let rK8: Karte = {
     farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♦",
-    zahl: 8
+    zahl: 8,
+    rang: 26
 };
 
 let rK9: Karte = {
     farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♦",
-    zahl: 9
+    zahl: 9,
+    rang: 27
 };
 
 let rK10: Karte = {
     farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♦",
-    zahl: 10
+    zahl: 10,
+    rang: 28
 };
 
 let rKB: Karte = {
     farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♦",
-    zahl: 11
+    zahl: 11,
+    rang: 29
 };
 
 let rKD: Karte = {
     farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♦",
-    zahl: 12
+    zahl: 12,
+    rang: 30
 };
 
 let rKK: Karte = {
     farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♦",
-    zahl: 13
+    zahl: 13,
+    rang: 31
 };
 
 let rKA: Karte = {
     farbe: "<p class='roteKarte'>Rot</p>",
     zeichen: "♦",
-    zahl: 14
+    zahl: 14,
+    rang: 32
 };
 
 let deck: Karte[] = [sK7, sK8, sK9, sK10, sKB, sKD, sKK, sKA, sP7, sP8, sP9, sP10, sPB, sPD, sPK, sPA, rH7, rH8, rH9, rH10, rHB, rHD, rHK, rHA, rK7, rK8, rK9, rK10, rKB, rKD, rKK, rKA];
+
 let handkarten: Karte[] = [];
+
+let ablegestapel: Karte[] = [];
+
 document.addEventListener("DOMContentLoaded", deckMischen);
+
+let button: HTMLButtonElement = <HTMLButtonElement><unknown>document.addEventListener("click", renderSortRang);
+//let div: HTMLDivElement = <HTMLDivElement><unknown>document.addEventListener("click", karteZiehen());
 
 function deckMischen(): void {
     let zähler: number = deck.length;
@@ -283,7 +323,7 @@ function writeHTML(handkarte: Karte, htmlID: string): void {
     document.getElementById(htmlID).appendChild(prodElement);
 }
 
-function karteZiehen(_handkarten: Karte[]): void {
+function karteZiehen(): Karte[] {
     let i: number = 0;
     let ziehen: Karte = deck.pop();
     handkarten = handkarten.concat(ziehen);
@@ -294,7 +334,44 @@ function karteZiehen(_handkarten: Karte[]): void {
             console.log("Gezogene Karte:", handkarten);
         }
         i++;
-        console.log(handkarten);
+    }
+    return handkarten;
+}
+
+function sortArrayZahl(): void {
+    handkarten.sort((a, b) => a.zahl - b.zahl);
+    console.log(handkarten.map(karte => karte.zahl));
+}
+
+function sortArrayRang(): void {
+    handkarten.sort(rangSortieren);
+}
+
+function rangSortieren(_a: Karte, _b: Karte): number {
+    if (_a.rang < _b.rang)  {
+        return -1; }
+    if (_a.rang > _b.rang) {
+        return 1; }
+    if (_a.rang == _b.rang) {
+        return 0; }
+}
+
+function renderSortRang(): void {
+    sortArrayRang();
+    document.getElementById("handkarten").innerHTML = "";
+    for (let i: number = 0; i < handkarten.length; i++) {
+        writeHTML(handkarten[i], "handkarten");
+    }
+}
+
+function handkarteSpielen(): void {
+    let i: number = 1;
+    let ablegestapel: Karte[] = handkarten.splice(0, 1);
+    document.getElementById("ablegestapel").innerHTML = "";
+    if (i == ablegestapel.length) {
+        writeHTML(ablegestapel[0], "ablegestapel");
+    } else {
+        console.log("OMEGALUL");
     }
 }
 
