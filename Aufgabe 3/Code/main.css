@@ -104,15 +104,6 @@ h1 {
     width: 70em;
 }
   
-#ablegestapel {
-    border: 5px solid white;
-    width: 8em;
-    height: 20em;
-    display: flex;
-    margin: 0em 10em;
-    border-radius: 10px;
-}
-  
 .deck {
     width: 15em;
     height: 20em;
@@ -135,15 +126,6 @@ h1 {
         margin: 2em;
         flex-direction: column;
     }
-
-    #ablegestapel{
-        border: 5px solid white;
-        width: 12em;
-        height: 20em;
-        display: flex;
-        margin: 0em 10em;
-        border-radius: 10px;
-    }
 }
 
 @media only screen and (min-width: 1920px){
@@ -154,13 +136,5 @@ h1 {
         width: 15em;
         margin: 2.5em;
         flex-direction: column;
-    }
-
-    #ablegestapel{
-        border: 5px solid white;
-        width: 15em;
-        display: flex;
-        margin: 0em 10em;
-        border-radius: 10px;
     }
 }

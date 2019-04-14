@@ -238,7 +238,7 @@ let ablegestapel: Karte[] = [];
 document.addEventListener("DOMContentLoaded", deckMischen);
 
 let button: HTMLButtonElement = <HTMLButtonElement><unknown>document.addEventListener("click", renderSortRang);
-//let div: HTMLDivElement = <HTMLDivElement><unknown>document.addEventListener("click", karteZiehen());
+let div: HTMLDivElement = <HTMLDivElement><unknown>document.addEventListener("click", karteZiehen());
 
 function deckMischen(): void {
     let zähler: number = deck.length;
