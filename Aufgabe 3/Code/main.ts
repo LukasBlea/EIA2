@@ -352,6 +352,7 @@ namespace Aufgabe3 {
 
 
     function sortArrayZahl(): void {
+        handkarten.sort((a, b) => a.zahl - b.zahl);
         document.getElementById("handkarten").innerHTML = "";
         for (let i: number = 0; i < handkarten.length; i++) {
             writeHTML(handkarten[i], "handkarten");

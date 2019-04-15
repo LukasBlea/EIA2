@@ -307,6 +307,7 @@ var Aufgabe3;
         return handkarten;
     }
     function sortArrayZahl() {
+        handkarten.sort((a, b) => a.zahl - b.zahl);
         document.getElementById("handkarten").innerHTML = "";
         for (let i = 0; i < handkarten.length; i++) {
             writeHTML(handkarten[i], "handkarten");
