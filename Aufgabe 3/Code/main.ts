@@ -327,7 +327,6 @@ namespace Aufgabe3 {
                 case 11: {
                     let bube: string = "B";
                     elementstring += `<p class="zahl">${bube}</p>`;
-                    console.log("Bube");
                 }
                     break;
                 case 12: {
@@ -362,9 +361,8 @@ namespace Aufgabe3 {
         handkarten = handkarten.concat(ziehen);
         while (i == 0) {
             if (deck.length == 0) {
-                console.log("Es kann keine Karte mehr gezogen werden");
+                document.getElementById("deck").innerHTML = "Es kann keine Karte mehr gezogen werden";
             } else {
-                console.log("Gezogene Karte:", handkarten);
                 document.getElementById("handkarten").innerHTML = "";
                 for (let i: number = 0; i < handkarten.length; i++) {
                     writeHTML(handkarten[i], "handkarten");
