@@ -278,12 +278,43 @@ var Aufgabe3;
         let prodElement = document.createElement("div");
         // tslint:disable-next-line:typedef
         let elementstring = `
-    <div id="handkarte">
+        <div id="handkarte">
         <p class="zeichen">${handkarte.zeichen}</p>
-        <p class="zahl">${handkarte.zahl}</p>
-        ${handkarte.farbe}
-    </div>
-    `;
+        `;
+        if (handkarte.zahl > 10) {
+            switch (handkarte.zahl) {
+                case 11:
+                    {
+                        let bube = "B";
+                        elementstring += `<p class="zahl">${bube}</p>`;
+                        console.log("Bube");
+                    }
+                    break;
+                case 12:
+                    {
+                        let dame = "D";
+                        elementstring += `<p class="zahl">${dame}</p>`;
+                    }
+                    break;
+                case 13:
+                    {
+                        let koenig = "K";
+                        elementstring += `<p class="zahl">${koenig}</p>`;
+                    }
+                    break;
+                case 14:
+                    {
+                        let ass = "A";
+                        elementstring += `<p class="zahl">${ass}</p>`;
+                    }
+                    break;
+            }
+        }
+        else {
+            elementstring += `<p class="zahl">${handkarte.zahl}</p>`;
+        }
+        elementstring += `${handkarte.farbe}
+        </div>`;
         prodElement.innerHTML = elementstring;
         document.getElementById(htmlID).appendChild(prodElement);
     }
