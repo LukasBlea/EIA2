@@ -237,10 +237,10 @@ namespace Aufgabe3 {
     document.addEventListener("DOMContentLoaded", deckMischen);
     document.addEventListener("DOMContentLoaded", interaktiv);
 
-    function interaktiv() {
+    function interaktiv(): void {
         document.getElementById("zeichensort").addEventListener("click", renderSortRang); //passt
         document.getElementById("deck").addEventListener("click", karteZiehen); //passt
-        document.getElementById("handkarten").addEventListener("click", handkarteSpielen);
+        document.getElementById("handkarten").addEventListener("click", handkarteSpielen2);
         document.getElementById("zahlsort").addEventListener("click", sortArrayZahl); //passt
         document.addEventListener("keydown", leertaste); //passt
     }
@@ -271,44 +271,44 @@ namespace Aufgabe3 {
                 console.log(handkarten);
                 writeHTML(handkarten[i], "handkarten");
             }
-                break;
+                      break;
             case "2": {
                 handkarten = deck.splice(0, 2);
                 console.log(handkarten);
             }
-                while (handkarten.length > i) {
+                      while (handkarten.length > i) {
                     writeHTML(handkarten[i], "handkarten");
                     i++;
                 }
-                break;
+                      break;
             case "3": {
                 handkarten = deck.splice(0, 3);
                 console.log(handkarten);
             }
-                while (handkarten.length > i) {
+                      while (handkarten.length > i) {
                     writeHTML(handkarten[i], "handkarten");
                     i++;
                 }
-                break;
+                      break;
             case "4": {
                 handkarten = deck.splice(0, 4);
                 console.log(handkarten);
             }
-                while (handkarten.length > i) {
+                      while (handkarten.length > i) {
                     writeHTML(handkarten[i], "handkarten");
                     i++;
                 }
-                break;
+                      break;
             default:
             case "5": {
                 handkarten = deck.splice(0, 5);
                 console.log(handkarten);
             }
-                while (handkarten.length > i) {
+                      while (handkarten.length > i) {
                     writeHTML(handkarten[i], "handkarten");
                     i++;
                 }
-                break;
+                      break;
         }
         console.log("Alles erfolgreich generiert.");
     }
@@ -319,8 +319,7 @@ namespace Aufgabe3 {
         // tslint:disable-next-line:typedef
         let elementstring =
             `
-        <div id="handkarte">
-        <p class="zeichen">${handkarte.zeichen}</p>
+        <p id="${handkarte.rang}" class="zeichen">${handkarte.zeichen}</p>
         `;
         if (handkarte.zahl > 10) {
             switch (handkarte.zahl) {
@@ -328,28 +327,28 @@ namespace Aufgabe3 {
                     let bube: string = "B";
                     elementstring += `<p class="zahl">${bube}</p>`;
                 }
-                    break;
+                         break;
                 case 12: {
                     let dame: string = "D";
                     elementstring += `<p class="zahl">${dame}</p>`;
                 }
-                    break;
+                         break;
                 case 13: {
                     let koenig: string = "K";
                     elementstring += `<p class="zahl">${koenig}</p>`;
                 }
-                    break;
+                         break;
                 case 14: {
                     let ass: string = "A";
                     elementstring += `<p class="zahl">${ass}</p>`;
                 }
-                    break;
+                         break;
             }
         } else {
             elementstring += `<p class="zahl">${handkarte.zahl}</p>`;
         }
         elementstring += `${handkarte.farbe}
-        </div>`;
+        `;
         prodElement.innerHTML = elementstring;
         document.getElementById(htmlID).appendChild(prodElement);
     }
@@ -407,22 +406,25 @@ namespace Aufgabe3 {
         }
     }
 
-    function handkarteSpielen(): void {
-        console.log("Handkarte Spielen");
-        let ablegestapel: Karte[] = handkarten.splice(0, 1);
-        document.getElementById("ablegestapel").innerHTML = "";
-        writeHTML(ablegestapel[0], "ablegestapel");
-        document.getElementById("handkarten").innerHTML = "";
+    function handkarteSpielen2(_event: MouseEvent): void {
+        let cast: Element = <Element>_event.target;
         for (let i: number = 0; i < handkarten.length; i++) {
-            writeHTML(handkarten[i], "handkarten");
+            if (Number(cast.getAttribute("id")) == handkarten[i].rang) {
+                let ablegestapel: Karte[] = handkarten.splice(i, 1);
+                document.getElementById("ablegestapel").innerHTML = "";
+                writeHTML(ablegestapel[0], "ablegestapel");
+                document.getElementById("handkarten").innerHTML = "";
+                for (let i: number = 0; i < handkarten.length; i++) {
+                    writeHTML(handkarten[i], "handkarten");
+            }
+        }
         }
     }
-
     function leertaste(_event: KeyboardEvent): void {
-        if (_event.keyCode == 32) {
-            karteZiehen();
+            if (_event.keyCode == 32) {
+                karteZiehen();
+            }
         }
-    }
 
-    // In Zusammenarbeit mit Elisabeth Haase
+        // In Zusammenarbeit mit Elisabeth Haase
 }

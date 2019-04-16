@@ -199,7 +199,7 @@ var Aufgabe3;
     function interaktiv() {
         document.getElementById("zeichensort").addEventListener("click", renderSortRang); //passt
         document.getElementById("deck").addEventListener("click", karteZiehen); //passt
-        document.getElementById("handkarten").addEventListener("click", handkarteSpielen);
+        document.getElementById("handkarten").addEventListener("click", handkarteSpielen2);
         document.getElementById("zahlsort").addEventListener("click", sortArrayZahl); //passt
         document.addEventListener("keydown", leertaste); //passt
     }
@@ -278,8 +278,7 @@ var Aufgabe3;
         let prodElement = document.createElement("div");
         // tslint:disable-next-line:typedef
         let elementstring = `
-        <div id="handkarte">
-        <p class="zeichen">${handkarte.zeichen}</p>
+        <p id="${handkarte.rang}" class="zeichen">${handkarte.zeichen}</p>
         `;
         if (handkarte.zahl > 10) {
             switch (handkarte.zahl) {
@@ -313,7 +312,7 @@ var Aufgabe3;
             elementstring += `<p class="zahl">${handkarte.zahl}</p>`;
         }
         elementstring += `${handkarte.farbe}
-        </div>`;
+        `;
         prodElement.innerHTML = elementstring;
         document.getElementById(htmlID).appendChild(prodElement);
     }
@@ -363,14 +362,18 @@ var Aufgabe3;
             writeHTML(handkarten[i], "handkarten");
         }
     }
-    function handkarteSpielen() {
-        console.log("Handkarte Spielen");
-        let ablegestapel = handkarten.splice(0, 1);
-        document.getElementById("ablegestapel").innerHTML = "";
-        writeHTML(ablegestapel[0], "ablegestapel");
-        document.getElementById("handkarten").innerHTML = "";
+    function handkarteSpielen2(_event) {
+        let cast = _event.target;
         for (let i = 0; i < handkarten.length; i++) {
-            writeHTML(handkarten[i], "handkarten");
+            if (Number(cast.getAttribute("id")) == handkarten[i].rang) {
+                let ablegestapel = handkarten.splice(i, 1);
+                document.getElementById("ablegestapel").innerHTML = "";
+                writeHTML(ablegestapel[0], "ablegestapel");
+                document.getElementById("handkarten").innerHTML = "";
+                for (let i = 0; i < handkarten.length; i++) {
+                    writeHTML(handkarten[i], "handkarten");
+                }
+            }
         }
     }
     function leertaste(_event) {
