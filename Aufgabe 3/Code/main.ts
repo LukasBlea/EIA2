@@ -238,11 +238,11 @@ namespace Aufgabe3 {
     document.addEventListener("DOMContentLoaded", interaktiv);
 
     function interaktiv(): void {
-        document.getElementById("zeichensort").addEventListener("click", renderSortRang); //passt
-        document.getElementById("deck").addEventListener("click", karteZiehen); //passt
+        document.getElementById("zeichensort").addEventListener("click", renderSortRang);
+        document.getElementById("deck").addEventListener("click", karteZiehen); 
         document.getElementById("handkarten").addEventListener("click", handkarteSpielen2);
-        document.getElementById("zahlsort").addEventListener("click", sortArrayZahl); //passt
-        document.addEventListener("keydown", leertaste); //passt
+        document.getElementById("zahlsort").addEventListener("click", sortArrayZahl); 
+        document.addEventListener("keydown", leertaste); 
     }
 
     function deckMischen(): void {

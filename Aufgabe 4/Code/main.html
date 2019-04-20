@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <title>Eisdealer</title>
+    <link rel="stylesheet" href="main.css" type="text/css" media="screen" />
+    <script src="main.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <fieldset id="wrap">
+        <legend> Eisdealer EIA-2 Edition </legend>
+        <!---->
+        <fieldset id="eissorten">
+            <legend> Eissorten </legend>
+            <input type="checkbox" name="Erdbeere" value="1" id="Erdbeere" />
+            <label for="Erdbeere">Erdbeere</label>
+            <input type="checkbox" name="Vanille" value="1" id="Vanille" />
+            <label for="Vanille">Vanille</label>
+            <input type="checkbox" name="Kokos" value="1" id="Kokos" />
+            <label for="Kokos">Kokos</label>
+            <input type="checkbox" name="Himbeere" value="1" id="Himbeere" />
+            <label for="Himbeere">Himbeere</label>
+            <input type="checkbox" name="Schokolade" value="1.50" id="Schokolade" />
+            <label for="Schokolade">Schokolade</label>
+            <input type="checkbox" name="Apfel" value="1" id="Apfel" />
+            <label for="Apfel">Apfel</label>
+            <input type="checkbox" name="Kiwi" value="1" id="Kiwi" />
+            <label for="Kiwi">Kiwi</label>
+            <input type="checkbox" name="Melone" value="1" id="Melone" />
+            <label for="Melone">Melone</label>
+            <input type="checkbox" name="Haselnuß" value="1.50" id="Haselnuß" />
+            <label for="Haselnuß">Haselnuß</label>
+            <input type="checkbox" name="Zitrone" value="1" id="Zitrone" />
+            <label for="Zitrone">Zitrone</label>
+        </fieldset>
+        <!---->
+        <fieldset id="waffeloderbecher">
+            <legend> Waffel oder Becher </legend>
+            <input type="radio" name="waffeloderbecher" value="waffeloderbecher1" id="waffeloderbecher1" required />
+            <label for="waffeloderbecher1">Waffel</label>
+            <input type="radio" name="waffeloderbecher" value="waffeloderbecher2" id="waffeloderbecher2" required />
+            <label for="waffeloderbecher2">Becher</label>
+        </fieldset>
+        <!---->
+        <fieldset id="lieferadresse">
+            <legend> Lieferadresse </legend>
+            <input type="text" name="text" placeholder="Lieferadresse eingeben" required />
+            <input type="text" name="pattern" pattern="[0-9]{5}" placeholder="Postleitzahl eingeben" required />
+            <input type="radio" name="lieferservice" value="lieferservice1" id="lieferservice1" required />
+            <label for="lieferservice1">DHL</label>
+            <input type="radio" name="lieferservice" value="lieferservice2" id="lieferservice2" required />
+            <label for="lieferservice2">Hermes</label>
+            Extra
+            <textarea name="area" cols="30" rows="3" placeholder="Extra Wünsche hier"></textarea>
+        </fieldset>
+        <!---->
+    </fieldset>
+    <aside id="zusammenfassung">
+        <h3>Bestelltung: </h3>
+        <p id="eis1"></p>
+        <p id="eis2"></p>
+        <p id="eis3"></p>
+        <p id="eis4"></p>
+        <p id="eis5"></p>
+        <p id="eis6"></p>
+        <p id="eis7"></p>
+        <p id="eis8"></p>
+        <p id="eis9"></p>
+        <p id="eis10"></p>
+        <p id="gesamtpreis"></p>
+    </aside>
+</body>
+
+<footer>
+
+</footer>

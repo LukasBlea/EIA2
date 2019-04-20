@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i|Rubik+Mono+One');
+
+* {
+    display: block;
+    font-family: "Open Sans", sans-serif;
+}
+
+input[type="number"] {
+    width: 2em;
+}
+
+input[type="checkbox"], input[type="radio"], label, input[type="number"] {
+    display: inline;
+}
+
+fieldset {
+    width: 20em;
+}
+
+label::after {
+    content: "";
+    display: block;
+}
+
+head {
+    display: none;
+}
+
+#lieferadresse input{
+    margin: 0.3em;
+}
+
+#lieferadresse textarea{
+    margin: 0.3em;
+}
+
+#zusammenfassung {
+    overflow: hidden;
+    z-index: 0;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: white;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+button:hover {
+    background: gray;
+    color: white;
+}
