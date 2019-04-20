@@ -2,7 +2,7 @@ namespace Aufgabe04 {
 
     let gesamtpreis: number = 0;
 
-    window.addEventListener("change", init);
+    window.addEventListener("load", init);
 
     function init(_event: Event): void {
 
@@ -21,7 +21,7 @@ namespace Aufgabe04 {
         switch (ziel.name) {
             case ("Erdbeere"): {
                 if (ziel.checked == true) {
-                    document.getElementById("eis1").innerHTML = ziel.value + "   " + ziel.name;
+                    document.getElementById("eis1").innerHTML = "1x  " + ziel.name;
                     let preis1: number = Number(ziel.value);
                     preis(preis1, 0);
                 } else {
@@ -29,12 +29,13 @@ namespace Aufgabe04 {
                     let preis1: number = 0;
                     preis(0, preis1);
                 }
+                break;
             }
-                               break;
+    
 
             case ("Vanille"): {
                 if (ziel.checked == true) {
-                    document.getElementById("eis2").innerHTML = ziel.value + "   " + ziel.name;
+                    document.getElementById("eis2").innerHTML = "1x  " + ziel.name;
                     let preis2: number = Number(ziel.value);
                     preis(preis2, 0);
                 } else {
@@ -42,11 +43,12 @@ namespace Aufgabe04 {
                     let preis2: number = 0;
                     preis(0, preis2);
                 }
+                break;
             }
-                              break;
+   
             case ("Kokos"): {
                 if (ziel.checked == true) {
-                    document.getElementById("eis3").innerHTML = ziel.value + "   " + ziel.name;
+                    document.getElementById("eis3").innerHTML = "1x  " + ziel.name;
                     let preis3: number = Number(ziel.value);
                     preis(preis3, 0);
                 } else {
@@ -54,11 +56,12 @@ namespace Aufgabe04 {
                     let preis3: number = 0;
                     preis(0, preis3);
                 }
+                break;
             }
-                            break;
+ 
             case ("Himbeere"): {
                 if (ziel.checked == true) {
-                    document.getElementById("eis4").innerHTML = ziel.value + "   " + ziel.name;
+                    document.getElementById("eis4").innerHTML = "1x  " + ziel.name;
                     let preis4: number = Number(ziel.value);
                     preis(preis4, 0);
                 } else {
@@ -66,11 +69,12 @@ namespace Aufgabe04 {
                     let preis4: number = 0;
                     preis(0, preis4);
                 }
+                break;
             }
-                               break;
+    
             case ("Schokolade"): {
                 if (ziel.checked == true) {
-                    document.getElementById("eis5").innerHTML = ziel.value + "   " + ziel.name;
+                    document.getElementById("eis5").innerHTML = "1x  " + ziel.name;
                     let preis5: number = Number(ziel.value);
                     preis(preis5, 0);
                 } else {
@@ -78,11 +82,12 @@ namespace Aufgabe04 {
                     let preis5: number = 0;
                     preis(0, preis5);
                 }
+                break;
             }
-                                 break;
+      
             case ("Apfel"): {
                 if (ziel.checked == true) {
-                    document.getElementById("eis6").innerHTML = ziel.value + "   " + ziel.name;
+                    document.getElementById("eis6").innerHTML = "1x  " + ziel.name;
                     let preis6: number = Number(ziel.value);
                     preis(preis6, 0);
                 } else {
@@ -90,11 +95,12 @@ namespace Aufgabe04 {
                     let preis6: number = 0;
                     preis(0, preis6);
                 }
+                break;
             }
-                            break;
+ 
             case ("Kiwi"): {
                 if (ziel.checked == true) {
-                    document.getElementById("eis7").innerHTML = ziel.value + "   " + ziel.name;
+                    document.getElementById("eis7").innerHTML = "1x" + ziel.value + "   " + ziel.name;
                     let preis7: number = Number(ziel.value);
                     preis(preis7, 0);
                 } else {
@@ -102,11 +108,12 @@ namespace Aufgabe04 {
                     let preis7: number = 0;
                     preis(0, preis7);
                 }
+                break;
             }
-                           break;
+
             case ("Melone"): {
                 if (ziel.checked == true) {
-                    document.getElementById("eis8").innerHTML = ziel.value + "   " + ziel.name;
+                    document.getElementById("eis8").innerHTML = "1x  " + ziel.name;
                     let preis8: number = Number(ziel.value);
                     preis(preis8, 0);
                 } else {
@@ -114,34 +121,33 @@ namespace Aufgabe04 {
                     let preis8: number = 0;
                     preis(0, preis8);
                 }
+                break;
             }
-                             break;
-            case ("Haselnuß"): {
+            case ("Haselnuss"): {
                 if (ziel.checked == true) {
-                    document.getElementById("eis9").innerHTML = ziel.value + "   " + ziel.name;
+                    document.getElementById("eis9").innerHTML = "1x  " + ziel.name;
                     let preis9: number = Number(ziel.value);
                     preis(preis9, 0);
                 } else {
                     document.getElementById("eis9").innerHTML = "";
-                    let preis9: 0;
+                    let preis9: number = 0;
                     preis(0, preis9);
                 }
+                break;
             }
-                               break;
             case ("Zitrone"): {
                 if (ziel.checked == true) {
-                    document.getElementById("eis10").innerHTML = ziel.value + "   " + ziel.name;
+                    document.getElementById("eis10").innerHTML = "1x  " + ziel.name;
                     let preis10: number = Number(ziel.value);
                     preis(preis10, 0);
                 } else {
                     document.getElementById("eis10").innerHTML = "";
-                    let preis10: 0;
+                    let preis10: number =  0;
                     preis(0, preis10);
                 }
+                break;
             }
-                              break;
         }
-
         function preis(_preisaddition: number, _preissubstracion: number): void {
             let hilfestellung: number = 0.5;
             gesamtpreis = gesamtpreis - hilfestellung + _preisaddition - _preissubstracion;
