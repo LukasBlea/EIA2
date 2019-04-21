@@ -17,6 +17,26 @@ fieldset {
     width: 20em;
 }
 
+legend {
+    color: lightblue;
+}
+
+label {
+    color: lightslategray;
+}
+
+.WoderB {
+    color: lightblue;
+}
+
+input:required {
+    background-color: lightgray;
+}
+
+input:valid {
+    background-color: lightgreen;
+}
+
 label::after {
     content: "";
     display: block;

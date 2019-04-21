@@ -35,24 +35,37 @@
             <label for="Haselnuss">Haselnuss</label>
             <input type="checkbox" name="Zitrone" value="1" id="Zitrone" />
             <label for="Zitrone">Zitrone</label>
+        <hr>
+            <p class="WoderB">Waffel oder Becher</p>
+            <input type="radio" name="Waffel oder Becher" value="0" id="Waffel" required />
+            <label for="Waffel">Waffel</label>
+            <input type="radio" name="Waffel oder Becher" value="0" id="Becher" required />
+            <label for="Becher">Becher</label>
         </fieldset>
         <!---->
-        <fieldset id="waffeloderbecher">
-            <legend> Waffel oder Becher </legend>
-            <input type="radio" name="waffeloderbecher" value="waffeloderbecher1" id="waffeloderbecher1" required />
-            <label for="waffeloderbecher1">Waffel</label>
-            <input type="radio" name="waffeloderbecher" value="waffeloderbecher2" id="waffeloderbecher2" required />
-            <label for="waffeloderbecher2">Becher</label>
+        <fieldset id="toppings">
+            <legend>Toppings</legend>
+            <input type="checkbox" name="Portion Sahne" value="0.60" id="Portion Sahne"/>
+            <label for="Portion Sahne">Portion Sahne</label>
+            <input type="checkbox" name="Schokosoße" value="0.80" id="Schokosoße"/>
+            <label for="Schokosoße">Schokosoße</label>
+            <input type="checkbox" name="Erdbeersoße" value="0.80" id="Erdbeersoße"/>
+            <label for="Erdbeersoße">Erdbeersoße</label>
+            <input type="checkbox" name="Schokostreusel" value="0.40" id="Schokostreusel"/>
+            <label for="Schokostreusel">Schokostreusel</label>
+            <input type="checkbox" name="Haribos" value="0.60" id="Haribos"/>
+            <label for="Haribos">Haribos</label>
         </fieldset>
         <!---->
         <fieldset id="lieferadresse">
             <legend> Lieferadresse </legend>
-            <input type="text" name="text" placeholder="Lieferadresse eingeben" required />
+            <input type="text" name="text" pattern="[A-Za-z]{6,}" placeholder="Lieferadresse eingeben" required />
+            <input type="text" name="text" pattern="[0-9]{1,2}" placeholder="Hausnummer" required />
             <input type="text" name="pattern" pattern="[0-9]{5}" placeholder="Postleitzahl eingeben" required />
-            <input type="radio" name="lieferservice" value="lieferservice1" id="lieferservice1" required />
-            <label for="lieferservice1">DHL</label>
-            <input type="radio" name="lieferservice" value="lieferservice2" id="lieferservice2" required />
-            <label for="lieferservice2">Hermes</label>
+            <input type="radio" name="Versandart" value="lieferservice1" id="DHL" required />
+            <label for="DHL">DHL</label>
+            <input type="radio" name="Versandart" value="lieferservice2" id="Hermes" required />
+            <label for="Hermes">Hermes</label>
             Extra
             <textarea name="area" cols="30" rows="3" placeholder="Extra Wünsche hier"></textarea>
         </fieldset>
@@ -70,6 +83,13 @@
         <span id="eis8"></span>
         <span id="eis9"></span>
         <span id="eis10"></span>
+        <span id="woderb"></span>
+        <span id="topping1"></span>
+        <span id="topping2"></span>
+        <span id="topping3"></span>
+        <span id="topping4"></span>
+        <span id="topping5"></span>
+        <span id="versandart"></span>
         <p id="gesamtpreis"></p>
     </aside>
 </body>
