@@ -205,7 +205,7 @@ var Aufgabe04;
             }
             case ("Haribos"): {
                 if (ziel.checked == true) {
-                    document.getElementById("topping4").innerHTML = ziel.id;
+                    document.getElementById("topping5").innerHTML = ziel.id;
                     let preistopping = Number(ziel.value);
                     preis(0.30, preistopping, 0);
                 }

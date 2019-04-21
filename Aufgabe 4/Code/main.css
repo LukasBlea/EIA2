@@ -55,9 +55,10 @@ head {
 }
 
 #zusammenfassung {
+    display: flex;
     overflow: hidden;
     z-index: 0;
-    display: block;
+    display: inline-block;
     position: fixed;
     bottom: 0;
     right: 0;
@@ -70,4 +71,32 @@ head {
 button:hover {
     background: gray;
     color: white;
+}
+
+@media only screen and (min-width:768px) {
+    #zusammenfassung {
+        right: 10px;
+        top: 150px;
+        left: 500px;
+        bottom: 150px;
+        position: fixed;
+        overflow: hidden;
+        background: white;
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    #zusammenfassung {
+        right: 30px;
+        top: 150px;
+        left: 1000px;
+        bottom: 150px;
+        position: fixed;
+        overflow: hidden;
+        background: white;
+        border: 2px solid black;
+        border-radius: 10px;
+    }
 }
