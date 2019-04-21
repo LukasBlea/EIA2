@@ -1,102 +1,131 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i|Rubik+Mono+One');
 
-* {
-    display: block;
-    font-family: "Open Sans", sans-serif;
+
+
+
+/*************** Main ***************/
+
+body {
+    margin: 0;
+    margin-bottom: 10%;
+    padding: 0;
+    display: flex;
+    background-color: #ffffff;
+    color: #282828;
+    font-family: Open Sans, sans-serif;
 }
 
-input[type="number"] {
-    width: 2em;
+h1 {
+    font-family: Rubik Mono One, sans-serif;
+    display: flex;
+    margin: 10px 25px;
 }
 
-input[type="checkbox"], input[type="radio"], label, input[type="number"] {
+fieldset input[type="radio"], input[type="checkbox"], label {
     display: inline;
+
 }
 
-fieldset {
-    width: 20em;
+input:invalid {
+	color: darkred;
 }
-
-legend {
-    color: lightblue;
-}
-
-label {
-    color: lightslategray;
-}
-
-.WoderB {
-    color: lightblue;
-}
-
-input:required {
-    background-color: lightgray;
-}
-
 input:valid {
-    background-color: lightgreen;
+	color: green;
+}
+input:required {
+	background: #eeeeee;
 }
 
 label::after {
-    content: "";
-    display: block;
+	content: "";
+	display: block;
 }
 
-head {
-    display: none;
+fieldset {
+    border: solid 2px #282828;
 }
 
-#lieferadresse input{
-    margin: 0.3em;
+fieldset fieldset {
+    margin: 2% 0% 1% 0%;
+    border: none;
 }
 
-#lieferadresse textarea{
-    margin: 0.3em;
+legend {
+    font-family: Rubik Mono One, sans-serif;
 }
 
-#zusammenfassung {
-    display: flex;
-    overflow: hidden;
-    z-index: 0;
+
+
+/*************** Button Action ***************/
+
+button {
+    background-color: #eee;
+    border: 2px solid #282828;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
+}
+
+
+/*************** Footer ***************/
+
+footer {
     position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background: white;
-    border: 2px solid black;
-    border-radius: 10px;
+    width: 100%;
+    left: 0%;
+    bottom: 0%;
+    background-color: #eee;
+    padding: 1%;
+    z-index: 15;
 }
 
-button:hover {
-    background: gray;
-    color: white;
-}
 
-@media only screen and (min-width:768px) {
-    #zusammenfassung {
-        right: 10px;
-        top: 150px;
-        left: 500px;
-        bottom: 150px;
-        position: fixed;
-        overflow: hidden;
-        background: white;
-        border: 2px solid black;
-        border-radius: 10px;
+
+/*************** Media Query ***************/
+
+@media screen and (max-width: 36em) {
+
+    body { 
+        margin-bottom: 10%;
     }
+
+    div {
+        width: 96%;
+        margin: 1%;
+    }
+
+
+    div fieldset {
+        margin: 2%;
+    }
+
 }
 
-@media only screen and (min-width:1200px) {
-    #zusammenfassung {
-        right: 30px;
-        top: 150px;
-        left: 1000px;
-        bottom: 150px;
-        position: fixed;
-        overflow: hidden;
-        background: white;
-        border: 2px solid black;
-        border-radius: 10px;
+@media screen and (min-width: 64em) {
+
+    body {
+        margin-bottom: 10%;
     }
+
+    fieldset {
+        width: 43%;
+        float: left;
+    }
+    
+    div {
+        width: 46%;
+        margin: 1%;
+        padding-left: 25%;
+    }
+
+    div fieldset { 
+        margin: 1%;
+    }
+
+    img {
+        align-self: right;
+    }
+
 }

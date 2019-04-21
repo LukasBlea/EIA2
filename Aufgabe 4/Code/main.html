@@ -1,78 +1,126 @@
+<!--
+		Aufgabe: Aufgabe 4
+		Name: Lukas Blea
+		Matrikel: -
+		Datum: 21.04.2019
+		Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
+        Er wurde nicht kopiert und auch nicht diktiert.
+        
+        In Zusammenarbeit mit Elisabeth Haase entstanden. 
+		-->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8" />
-    <title>Eisdealer</title>
-    <link rel="stylesheet" href="main.css" type="text/css" media="screen" />
-    <script src="main.js" type="text/javascript"></script>
+    <meta charset="UTF-8">
+
+    <title>🍦 ice ice baby 🍦</title>
+
+    <link href="main.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="main.js"></script>
 </head>
 
+
 <body>
-    <fieldset id="wrap">
-        <legend> Eisdealer EIA-2 Edition </legend>
-        <!---->
-        <fieldset id="eissorten">
+
+    <div>
+        <h1>Eisdealer🍦😎</h1>
+
+        <fieldset id="text">
             <legend> Eissorten </legend>
+
             <input type="checkbox" name="Erdbeere" value="1" id="Erdbeere" />
             <label for="Erdbeere">Erdbeere</label>
+
             <input type="checkbox" name="Vanille" value="1" id="Vanille" />
             <label for="Vanille">Vanille</label>
+
             <input type="checkbox" name="Kokos" value="1" id="Kokos" />
             <label for="Kokos">Kokos</label>
+
             <input type="checkbox" name="Himbeere" value="1" id="Himbeere" />
             <label for="Himbeere">Himbeere</label>
+
             <input type="checkbox" name="Schokolade" value="1" id="Schokolade" />
             <label for="Schokolade">Schokolade</label>
+
             <input type="checkbox" name="Apfel" value="1" id="Apfel" />
             <label for="Apfel">Apfel</label>
+
             <input type="checkbox" name="Kiwi" value="1" id="Kiwi" />
             <label for="Kiwi">Kiwi</label>
+
             <input type="checkbox" name="Melone" value="1" id="Melone" />
             <label for="Melone">Melone</label>
+
             <input type="checkbox" name="Haselnuss" value="1" id="Haselnuss" />
             <label for="Haselnuss">Haselnuss</label>
+
             <input type="checkbox" name="Zitrone" value="1" id="Zitrone" />
             <label for="Zitrone">Zitrone</label>
-        <hr>
-            <p class="WoderB">Waffel oder Becher</p>
-            <input type="radio" name="Waffel oder Becher" value="0" id="Waffel" required />
-            <label for="Waffel">Waffel</label>
-            <input type="radio" name="Waffel oder Becher" value="0" id="Becher" required />
-            <label for="Becher">Becher</label>
+
+            <hr />
+            <fieldset id="radio">
+                <input type="radio" name="Waffel oder Becher" value="5" id="Becher" required />
+                <label for="Becher">im Becher</label>
+                <input type="radio" name="Waffel oder Becher" value="2" id="Waffel" required />
+                <label for="Waffel">in der Waffel</label>
+            </fieldset>
         </fieldset>
-        <!---->
-        <fieldset id="toppings">
-            <legend>Toppings</legend>
-            <input type="checkbox" name="Portion Sahne" value="0.60" id="Portion Sahne"/>
-            <label for="Portion Sahne">Portion Sahne</label>
-            <input type="checkbox" name="Schokosoße" value="0.80" id="Schokosoße"/>
-            <label for="Schokosoße">Schokosoße</label>
-            <input type="checkbox" name="Erdbeersoße" value="0.80" id="Erdbeersoße"/>
-            <label for="Erdbeersoße">Erdbeersoße</label>
-            <input type="checkbox" name="Schokostreusel" value="0.40" id="Schokostreusel"/>
-            <label for="Schokostreusel">Schokostreusel</label>
-            <input type="checkbox" name="Haribos" value="0.60" id="Haribos"/>
-            <label for="Haribos">Haribos</label>
+
+        <fieldset id="text">
+            <legend> Toppings </legend>
+            <input type="checkbox" name="Portion Sahne" value="1" id="Portion Sahne" /><label
+                for="Portion Sahne">Portion Sahne</label>
+            <input type="checkbox" name="Schokosoße" value="1" id="Schokosoße" /><label
+                for="Schokosoße">Schokosoße</label>
+            <input type="checkbox" name="Erdbeersoße" value="1" id="Erdbeersoße" /><label
+                for="Erdbeersoße">Erdbeersoße</label>
+            <input type="checkbox" name="Schokostreusel" value="1" id="Schokostreusel" /><label
+                for="Schokostreusel">Schokostreusel</label>
+            <input type="checkbox" name="Gummibärchen" value="1" id="Gummibärchen" /><label
+                for="Gummibärchen">Gummibärchen</label>
         </fieldset>
-        <!---->
-        <fieldset id="lieferadresse">
-            <legend> Lieferadresse </legend>
-            <input type="text" name="text" pattern="[A-Za-z]{6,}" placeholder="Lieferadresse eingeben" required />
-            <input type="text" name="text" pattern="[0-9]{1,2}" placeholder="Hausnummer" required />
-            <input type="text" name="pattern" pattern="[0-9]{5}" placeholder="Postleitzahl eingeben" required />
-            <input type="radio" name="Versandart" value="lieferservice1" id="DHL" required />
-            <label for="DHL">DHL</label>
-            <input type="radio" name="Versandart" value="lieferservice2" id="Hermes" required />
-            <label for="Hermes">Hermes</label>
-            Extra
-            <textarea name="area" cols="30" rows="3" placeholder="Extra Wünsche hier"></textarea>
+
+        <fieldset id="text">
+            <legend> Kommentar </legend>
+            <textarea name="Kommantar" cols="38" rows="9" placeholder="you yee'd your last haw, frend 🤠"></textarea>
         </fieldset>
-        <!---->
-    </fieldset>
-    <aside id="zusammenfassung">
-        <h3>Bestelltung: </h3>
+
+        <fieldset id="text">
+            <legend> Lieferdaten </legend>
+            Name<br />
+            <input type="text" name="Name" pattern="[A-Z a-z]{3,}"placeholder="Nicolas Cage" required /><br />
+            Straße und Hausnummer<br />
+            <input type="text" name="Straße" pattern="[A-Z a-z]{6,}" placeholder="San Vicente Blvd" required /> 
+            <input type="text" name="Hausnummer"  pattern="[0-9]{1,2}" placeholder="24" required />
+            <br />Ort und PLZ<br />
+            <input type="text" name="Ort" placeholder="California" required /> <input type="text" name="PLZ"
+                pattern="[0-9]{5}" placeholder="78120" required />
+
+            <fieldset id="radio">
+                <legend></legend>
+                <input type="radio" name="Lieferoption" value="lieferservice1" id="Selbstabholung" />
+                <label for="Selbstabholung">Selbstabholung</label>
+                <input type="radio" name="Lieferoption" value="lieferservice2" id="DHL" />
+                <label for="DHL">DHL</label>
+            </fieldset>
+        </fieldset>
+
+        <fieldset id="">
+            <legend>uh oh </legend>
+            <img src="nicolascage.png" alt="who is he" height=270px width=280px>
+        </fieldset>
+
+    </div>
+
+</body>
+
+<footer>
+
+    <div id="overview">
         <span id="eis1"></span>
         <span id="eis2"></span>
         <span id="eis3"></span>
@@ -91,9 +139,11 @@
         <span id="topping5"></span>
         <span id="versandart"></span>
         <p id="gesamtpreis"></p>
-    </aside>
-</body>
+    </div>
 
-<footer>
+    <button id="button">Bestellung prüfen</button>
+    <span id="buttonangaben"></span>
 
 </footer>
+
+</html>
