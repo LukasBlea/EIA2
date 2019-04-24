@@ -168,6 +168,14 @@ var Aufgabe04;
             }
         }
     }
+    function eissorteTrue(_eisID, _eisname, _eispreis) {
+        document.getElementById(_eisID).innerHTML = "1x  " + _eisname + " " + "|";
+        preis(0, _eispreis, 0);
+    }
+    function eissorteFalse(_eisID, _eisname, _eispreis) {
+        document.getElementById(_eisID).innerHTML = "";
+        preis(1, 0, _eispreis);
+    }
     function preis(_hilfestellung, _preisaddition, _preissubstracion) {
         gesamtpreis = gesamtpreis + _preisaddition - _preissubstracion - _hilfestellung;
         if (gesamtpreis < 0) {
@@ -178,20 +186,12 @@ var Aufgabe04;
     function pressedButton(_event) {
         let ziel = _event.target;
         console.log("pressed");
-        if (ziel.checked == false || gesamtpreis == 0) {
+        if (gesamtpreis == 0 || ziel.required == false || ziel.labels == undefined) {
             document.getElementById("buttonangaben").innerHTML = "Es wurden wichtige Daten noch nicht ausgefüllt";
         }
         else {
             document.getElementById("buttonangaben").innerHTML = "";
         }
-    }
-    function eissorteTrue(_eisID, _eisname, _eispreis) {
-        document.getElementById(_eisID).innerHTML = "1x  " + _eisname + " " + "|";
-        preis(0, _eispreis, 0);
-    }
-    function eissorteFalse(_eisID, _eisname, _eispreis) {
-        document.getElementById(_eisID).innerHTML = "";
-        preis(1, 0, _eispreis);
     }
 })(Aufgabe04 || (Aufgabe04 = {}));
 //# sourceMappingURL=main.js.map

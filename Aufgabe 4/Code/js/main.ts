@@ -163,6 +163,16 @@ namespace Aufgabe04 {
         }
     }
 
+    function eissorteTrue(_eisID: string, _eisname: string, _eispreis: number): void {
+        document.getElementById(_eisID).innerHTML = "1x  " + _eisname + " " + "|";
+        preis(0, _eispreis, 0);
+    }
+
+    function eissorteFalse(_eisID: string, _eisname: string, _eispreis: number): void {
+        document.getElementById(_eisID).innerHTML = "";
+        preis(1 , 0, _eispreis);
+    }
+
     function preis(_hilfestellung: number, _preisaddition: number, _preissubstracion: number): void {
         gesamtpreis = gesamtpreis + _preisaddition - _preissubstracion - _hilfestellung;
         if (gesamtpreis < 0) {
@@ -174,20 +184,10 @@ namespace Aufgabe04 {
     function pressedButton(_event: Event): void {
         let ziel: HTMLInputElement = <HTMLInputElement>_event.target;
         console.log("pressed");
-        if (ziel.checked == false || gesamtpreis == 0) {
+        if (gesamtpreis == 0 || ziel.required == false || ziel.labels == undefined) {
             document.getElementById("buttonangaben").innerHTML = "Es wurden wichtige Daten noch nicht ausgefüllt";
         } else {
             document.getElementById("buttonangaben").innerHTML = "";
         }
-    } 
-
-    function eissorteTrue(_eisID: string, _eisname: string, _eispreis: number): void {
-        document.getElementById(_eisID).innerHTML = "1x  " + _eisname + " " + "|";
-        preis(0, _eispreis, 0);
-    }
-
-    function eissorteFalse(_eisID: string, _eisname: string, _eispreis: number): void {
-        document.getElementById(_eisID).innerHTML = "";
-        preis(1, 0, _eispreis);
-    }
+    }  
 }
