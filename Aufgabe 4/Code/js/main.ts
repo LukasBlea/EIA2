@@ -19,128 +19,88 @@ namespace Aufgabe04 {
         switch (ziel.name) {
             case ("Erdbeere"): {
                 if (ziel.checked == true) {
-                    document.getElementById("eis1").innerHTML = "1x  " + ziel.name + " " + "|";
-                    let preis1: number = Number(ziel.value);
-                    preis(0, preis1, 0);
+                    eissorteTrue("eis1", "Erdbeere", 1);
                 } else {
-                    document.getElementById("eis1").innerHTML = "";
-                    let preis1: number = 0;
-                    preis(1, 0, preis1);
+                    eissorteFalse("eis1", "Erdbeere", 0);
                 }
                 break;
             }
 
             case ("Vanille"): {
                 if (ziel.checked == true) {
-                    document.getElementById("eis2").innerHTML = "1x  " + ziel.name + " " + "|";
-                    let preis2: number = Number(ziel.value);
-                    preis(0, preis2, 0);
+                    eissorteTrue("eis2", "Vanille", 1);
                 } else {
-                    document.getElementById("eis2").innerHTML = "";
-                    let preis2: number = 0;
-                    preis(1, 0, preis2);
+                    eissorteFalse("eis2", "Vanille", 0);
                 }
                 break;
             }
 
             case ("Kokos"): {
                 if (ziel.checked == true) {
-                    document.getElementById("eis3").innerHTML = "1x  " + ziel.name + " " + "|";
-                    let preis3: number = Number(ziel.value);
-                    preis(0, preis3, 0);
+                    eissorteTrue("eis3", "Kokos", 1);
                 } else {
-                    document.getElementById("eis3").innerHTML = "";
-                    let preis3: number = 0;
-                    preis(1, 0, preis3);
+                    eissorteFalse("eis3", "Kokos", 0);
                 }
                 break;
             }
 
             case ("Himbeere"): {
                 if (ziel.checked == true) {
-                    document.getElementById("eis4").innerHTML = "1x  " + ziel.name + " " + "|";
-                    let preis4: number = Number(ziel.value);
-                    preis(0, preis4, 0);
+                    eissorteTrue("eis4", "Himbeere", 1);
                 } else {
-                    document.getElementById("eis4").innerHTML = "";
-                    let preis4: number = 0;
-                    preis(1, 0, preis4);
+                    eissorteFalse("eis4", "Himbeere", 0);
                 }
                 break;
             }
 
             case ("Schokolade"): {
                 if (ziel.checked == true) {
-                    document.getElementById("eis5").innerHTML = "1x  " + ziel.name + " " + "|";
-                    let preis5: number = Number(ziel.value);
-                    preis(0, preis5, 0);
+                    eissorteTrue("eis5", "Schokolade", 1);
                 } else {
-                    document.getElementById("eis5").innerHTML = "";
-                    let preis5: number = 0;
-                    preis(1, 0, preis5);
+                    eissorteFalse("eis5", "Schokolade", 0);
                 }
                 break;
             }
 
             case ("Apfel"): {
                 if (ziel.checked == true) {
-                    document.getElementById("eis6").innerHTML = "1x  " + ziel.name + " " + "|";
-                    let preis6: number = Number(ziel.value);
-                    preis(0, preis6, 0);
+                    eissorteTrue("eis6", "Apfel", 1);
                 } else {
-                    document.getElementById("eis6").innerHTML = "";
-                    let preis6: number = 0;
-                    preis(1, 0, preis6);
+                    eissorteFalse("eis6", "Apfel", 0);
                 }
                 break;
             }
 
             case ("Kiwi"): {
                 if (ziel.checked == true) {
-                    document.getElementById("eis7").innerHTML = "1x  " + ziel.name + " " + "|";
-                    let preis7: number = Number(ziel.value);
-                    preis(0, preis7, 0);
+                    eissorteTrue("eis7", "Kiwi", 1);
                 } else {
-                    document.getElementById("eis7").innerHTML = "";
-                    let preis7: number = 0;
-                    preis(1, 0, preis7);
+                    eissorteFalse("eis7", "Kiwi", 0);
                 }
                 break;
             }
 
             case ("Melone"): {
                 if (ziel.checked == true) {
-                    document.getElementById("eis8").innerHTML = "1x  " + ziel.name + " " + "|";
-                    let preis8: number = Number(ziel.value);
-                    preis(0, preis8, 0);
+                    eissorteTrue("eis8", "Melone", 1);
                 } else {
-                    document.getElementById("eis8").innerHTML = "";
-                    let preis8: number = 0;
-                    preis(1, 0, preis8);
+                    eissorteFalse("eis8", "Melone", 0);
                 }
                 break;
             }
             case ("Haselnuss"): {
                 if (ziel.checked == true) {
-                    document.getElementById("eis9").innerHTML = "1x  " + ziel.name + " " + "|";
-                    let preis9: number = Number(ziel.value);
-                    preis(0, preis9, 0);
+                    eissorteTrue("eis9", "Haselnuss", 1);
                 } else {
-                    document.getElementById("eis9").innerHTML = "";
-                    let preis9: number = 0;
-                    preis(1, 0, preis9);
+                    eissorteFalse("eis9", "Haselnuss", 0);
                 }
                 break;
             }
             case ("Zitrone"): {
                 if (ziel.checked == true) {
-                    document.getElementById("eis10").innerHTML = "1x  " + ziel.name + " " + "|";
-                    let preis10: number = Number(ziel.value);
-                    preis(0, preis10, 0);
+                    eissorteTrue("eis10", "Zitrone", 1);
                 } else {
-                    document.getElementById("eis10").innerHTML = "";
-                    let preis10: number = 0;
-                    preis(1, 0, preis10);
+                    eissorteFalse("eis10", "Zitrone", 0);
                 }
                 break;
             }
@@ -154,61 +114,41 @@ namespace Aufgabe04 {
             }
             case("Portion Sahne"): {
                 if (ziel.checked == true) {
-                    document.getElementById("topping1").innerHTML = ziel.id + "," + "";
-                    let preistopping: number = Number(ziel.value);
-                    preis(0.50, preistopping, 0);
+                    eissorteTrue("topping1", "Portion Sahne", 0.5);
                 } else {
-                    document.getElementById("topping1").innerHTML = "";
-                    let preistopping: number = 0;
-                    preis(0.50, 0, preistopping);
+                    eissorteFalse("topping1", "Portion Sahne", 0);
                 }
                 break;
             }
             case("Schokosoße"): {
                 if (ziel.checked == true) {
-                    document.getElementById("topping2").innerHTML = ziel.id + "," + "";
-                    let preistopping: number = Number(ziel.value);
-                    preis(0.50, preistopping, 0);
+                    eissorteTrue("topping2", "Schokosoße", 0.5);
                 } else {
-                    document.getElementById("topping2").innerHTML = "";
-                    let preistopping: number = 0;
-                    preis(0.50, 0, preistopping);
+                    eissorteFalse("topping2", "Schokosoße", 0);
                 }
                 break;
             }
             case("Erdbeersoße"): {
                 if (ziel.checked == true) {
-                    document.getElementById("topping3").innerHTML = ziel.id + "," + "";
-                    let preistopping: number = Number(ziel.value);
-                    preis(0.50, preistopping, 0);
+                    eissorteTrue("topping3", "Erdbeersoße", 0.5);
                 } else {
-                    document.getElementById("topping3").innerHTML = "";
-                    let preistopping: number = 0;
-                    preis(0.50, 0, preistopping);
+                    eissorteFalse("topping3", "Erdbeersoße", 0);
                 }
                 break;
             }
             case("Schokostreusel"): {
                 if (ziel.checked == true) {
-                    document.getElementById("topping4").innerHTML = ziel.id + "," + "";
-                    let preistopping: number = Number(ziel.value);
-                    preis(0.50, preistopping, 0);
+                    eissorteTrue("topping4", "Schokostreusel", 0.5);
                 } else {
-                    document.getElementById("topping4").innerHTML = "";
-                    let preistopping: number = 0;
-                    preis(0.50, 0, preistopping);
+                    eissorteFalse("topping4", "Schokostreusel", 0);
                 }
                 break;
             }
             case("Gummibärchen"): {
                 if (ziel.checked == true) {
-                    document.getElementById("topping5").innerHTML = ziel.id + "," + "";
-                    let preistopping: number = Number(ziel.value);
-                    preis(0.50, preistopping, 0);
+                    eissorteTrue("topping5", "Gummibärchen", 0.5);
                 } else {
-                    document.getElementById("topping5").innerHTML = "";
-                    let preistopping: number = 0;
-                    preis(0.50, 0, preistopping);
+                    eissorteFalse("topping5", "Gummibärchen", 0);
                 }
                 break;
             }
@@ -240,4 +180,14 @@ namespace Aufgabe04 {
             document.getElementById("buttonangaben").innerHTML = "";
         }
     } 
+
+    function eissorteTrue(_eisID: string, _eisname: string, _eispreis: number): void {
+        document.getElementById(_eisID).innerHTML = "1x  " + _eisname + " " + "|";
+        preis(0, _eispreis, 0);
+    }
+
+    function eissorteFalse(_eisID: string, _eisname: string, _eispreis: number): void {
+        document.getElementById(_eisID).innerHTML = "";
+        preis(1, 0, _eispreis);
+    }
 }
