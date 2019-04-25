@@ -12,7 +12,9 @@ namespace Aufgabe04 {
             let fieldset: HTMLFieldSetElement = fieldsets[i];
             fieldset.addEventListener("change", handler);
         }
+
     }
+
 
     function handler(_event: Event): void {
         let ziel: HTMLInputElement = <HTMLInputElement>_event.target;
@@ -112,7 +114,7 @@ namespace Aufgabe04 {
                 }
                 break;
             }
-            case("Portion Sahne"): {
+            case ("Portion Sahne"): {
                 if (ziel.checked == true) {
                     eissorteTrue("topping1", "Portion Sahne", 0.5);
                 } else {
@@ -120,7 +122,7 @@ namespace Aufgabe04 {
                 }
                 break;
             }
-            case("Schokosoße"): {
+            case ("Schokosoße"): {
                 if (ziel.checked == true) {
                     eissorteTrue("topping2", "Schokosoße", 0.5);
                 } else {
@@ -128,7 +130,7 @@ namespace Aufgabe04 {
                 }
                 break;
             }
-            case("Erdbeersoße"): {
+            case ("Erdbeersoße"): {
                 if (ziel.checked == true) {
                     eissorteTrue("topping3", "Erdbeersoße", 0.5);
                 } else {
@@ -136,7 +138,7 @@ namespace Aufgabe04 {
                 }
                 break;
             }
-            case("Schokostreusel"): {
+            case ("Schokostreusel"): {
                 if (ziel.checked == true) {
                     eissorteTrue("topping4", "Schokostreusel", 0.5);
                 } else {
@@ -144,7 +146,7 @@ namespace Aufgabe04 {
                 }
                 break;
             }
-            case("Gummibärchen"): {
+            case ("Gummibärchen"): {
                 if (ziel.checked == true) {
                     eissorteTrue("topping5", "Gummibärchen", 0.5);
                 } else {
@@ -170,7 +172,7 @@ namespace Aufgabe04 {
 
     function eissorteFalse(_eisID: string, _eisname: string, _eispreis: number): void {
         document.getElementById(_eisID).innerHTML = "";
-        preis(1 , 0, _eispreis);
+        preis(0, 0, _eispreis);
     }
 
     function preis(_hilfestellung: number, _preisaddition: number, _preissubstracion: number): void {
@@ -182,12 +184,18 @@ namespace Aufgabe04 {
     }
 
     function pressedButton(_event: Event): void {
-        let ziel: HTMLInputElement = <HTMLInputElement>_event.target;
-        console.log("pressed");
-        if (gesamtpreis == 0 || ziel.required == false || ziel.labels == undefined) {
-            document.getElementById("buttonangaben").innerHTML = "Es wurden wichtige Daten noch nicht ausgefüllt";
-        } else {
-            document.getElementById("buttonangaben").innerHTML = "";
+        console.log("Hallo Eli");
+        let inputs: HTMLCollectionOf<HTMLInputElement> = document.getElementsByTagName("input");
+        for (let i: number = 0; i < inputs.length; i++) {
+            let input: HTMLInputElement = inputs[i];
+            if (input.getAttribute("lieferdaten") == "true") {
+                if (gesamtpreis == 0 || input.value == "") {
+                    document.getElementById("buttonangaben").innerHTML = "Es wurden wichtige Daten noch nicht ausgefüllt.";
+                } else {
+                    document.getElementById("buttonangaben").innerHTML = "";
+                }
+            }
+            console.log(input.value);
         }
-    }  
+    }
 }

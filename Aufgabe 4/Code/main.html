@@ -28,7 +28,7 @@
     <div>
         <h1>Eisdealer🍦😎</h1>
 
-        <fieldset id="text">
+        <fieldset id="eissorten">
             <legend> Eissorten </legend>
 
             <input type="checkbox" name="Erdbeere" value="1" id="Erdbeere" />
@@ -70,7 +70,7 @@
             </fieldset>
         </fieldset>
 
-        <fieldset id="text">
+        <fieldset id="Topping">
             <legend> Toppings </legend>
             <input type="checkbox" name="Portion Sahne" value="1" id="Portion Sahne" /><label
                 for="Portion Sahne">Portion Sahne</label>
@@ -84,7 +84,7 @@
                 for="Gummibärchen">Gummibärchen</label>
         </fieldset>
 
-        <fieldset id="text">
+        <fieldset id="Kommentar">
             <legend> Kommentar </legend>
             <textarea name="Kommantar" cols="38" rows="9" placeholder="you yee'd your last haw, frend 🤠"></textarea>
         </fieldset>
@@ -92,13 +92,15 @@
         <fieldset id="text">
             <legend> Lieferdaten </legend>
             Name<br />
-            <input type="text" name="Name" pattern="[A-Z a-z]{3,}" placeholder="Nicolas Cage" required /><br />
+            <input type="text" name="Name" pattern="[A-Z a-z]{3,}" placeholder="Nicolas Cage" lieferdaten="true"
+                required /><br />
             Straße und Hausnummer<br />
-            <input type="text" name="Straße" pattern="[A-Z a-z]{6,}" placeholder="San Vicente Blvd" required />
-            <input type="text" name="Hausnummer" pattern="[0-9]{1,2}" placeholder="24" required />
+            <input type="text" name="Straße" pattern="[A-Z a-z]{6,}" placeholder="San Vicente Blvd" lieferdaten="true"
+                required />
+            <input type="text" name="Hausnummer" pattern="[0-9]{1,2}" placeholder="24" lieferdaten="true" required />
             <br />Ort und PLZ<br />
-            <input type="text" name="Ort" placeholder="California" required /> <input type="text" name="PLZ"
-                pattern="[0-9]{5}" placeholder="78120" required/>
+            <input type="text" name="Ort" placeholder="California" lieferdaten="true" required /> <input type="text"
+                name="PLZ" pattern="[0-9]{5}" placeholder="78120" lieferdaten="true" required />
             <hr>
             <fieldset id="radio">
                 <legend>Bestelloptionen</legend>
@@ -143,7 +145,7 @@
 
     <button id="button">Bestellung prüfen</button>
     <span id="buttonangaben"></span>
-    
+
 </footer>
 
 </html>
