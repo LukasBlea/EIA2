@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i|Rubik+Mono+One');
+
+
+
+
+/*************** Main ***************/
+
+body {
+    margin: 0;
+    margin-bottom: 10%;
+    padding: 0;
+    display: flex;
+    background-color: #ffffff;
+    color: #282828;
+    font-family: Open Sans, sans-serif;
+}
+
+h1 {
+    font-family: Rubik Mono One, sans-serif;
+    display: flex;
+    margin: 10px 25px;
+}
+
+fieldset input[type="radio"], input[type="checkbox"], label {
+    display: inline;
+
+}
+
+input:invalid {
+	color: darkred;
+}
+input:valid {
+	color: green;
+}
+input:required {
+	background: #eeeeee;
+}
+
+label::after {
+	content: "";
+	display: block;
+}
+
+fieldset {
+    border: solid 2px #282828;
+}
+
+fieldset fieldset {
+    margin: 2% 0% 1% 0%;
+    border: none;
+}
+
+legend {
+    font-family: Rubik Mono One, sans-serif;
+}
+
+#eis  {
+    width: 29%;
+    padding: 1em;
+}
+
+#nicolas {
+    size: 30%;
+}
+
+
+
+/*************** Button Action ***************/
+
+button {
+    background-color: #eee;
+    border: 2px solid #282828;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+/*************** Footer ***************/
+
+footer {
+    position: fixed;
+    width: 100%;
+    left: 0%;
+    bottom: 0%;
+    background-color: #eee;
+    padding: 1%;
+    z-index: 15;
+}
+
+
+
+/*************** Media Query ***************/
+
+@media screen and (max-width: 36em) {
+
+    body { 
+        margin-bottom: 10%;
+    }
+
+    div {
+        width: 96%;
+        margin: 1%;
+    }
+
+
+    div fieldset {
+        margin: 2%;
+    }
+
+}
+
+@media screen and (min-width: 64em) {
+
+    body {
+        margin-bottom: 10%;
+    }
+
+    fieldset {
+        width: 43%;
+        float: left;
+    }
+    
+    div {
+        width: 46%;
+        margin: 1%;
+        padding-left: 25%;
+    }
+
+    div fieldset { 
+        margin: 1%;
+    }
+
+    img {
+        align-self: right;
+    }
+
+}
