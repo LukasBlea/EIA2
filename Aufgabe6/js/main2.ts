@@ -23,6 +23,7 @@ namespace Aufgabe05 {
 
         let fieldsets: HTMLCollectionOf<HTMLFieldSetElement> = document.getElementsByTagName("fieldset");
         document.getElementById("button").addEventListener("click", pressedButton);
+        document.getElementById("formular").addEventListener("click", formularSenden);
         for (let i: number = 0; i < fieldsets.length; i++) {
             let fieldset: HTMLFieldSetElement = fieldsets[i];
             fieldset.addEventListener("change", eisBerechnen);
@@ -30,8 +31,36 @@ namespace Aufgabe05 {
         displayFlexiblesEis(eis);
     }
 
+    function formularSenden(_event: Event): void {
+        let inputs: HTMLCollectionOf<HTMLInputElement> = document.getElementsByTagName("input");
+        for (let i: number = 0; i < inputs.length; i++) {
+            let input: HTMLInputElement = inputs[i];
+            if (input.checked == true) {
+                input.setAttribute("value", "1");
+                switch (input.id) {
+                    case ("Becher"): {
+                        input.setAttribute("value", "Becher");
+                    }
+                                     break;
+                    case ("Waffel"): {
+                        input.setAttribute("value", "Waffel");
+                    }
+                                     break;
+                    case ("Selbstabholung"): {
+                        input.setAttribute("value", "Selbstabholung");
+                    }
+                                             break;
+                    case ("DHL"): {
+                        input.setAttribute("value", "DHL");
+                    }
+                }
+            } else {
+                input.setAttribute("value", "0");
+            }
+        }
+    }
+
     function pressedButton(_event: Event): void {
-        console.log("Hallo Eli");
         let inputs: HTMLCollectionOf<HTMLInputElement> = document.getElementsByTagName("input");
         for (let i: number = 0; i < inputs.length; i++) {
             let input: HTMLInputElement = inputs[i];
@@ -66,6 +95,7 @@ namespace Aufgabe05 {
                 let post2: HTMLSpanElement = document.createElement("span");
                 post2.innerHTML = " | " + `${inputs[i].id}`;
                 document.getElementById("overview").appendChild(post2);
+                continue;
             }
             gesamtpreis = eispreis;
         }

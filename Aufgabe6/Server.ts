@@ -1,7 +1,6 @@
 import * as Http from "http"; //creating a HTTP object in the code, interpreter looks for each possible import in the http module and append it to the http object in the code
 
-
-namespace L05_Server { 				//obvious
+namespace L05_Server  { 				//obvious
   console.log("Starting server"); 	//obvious
   let port: number = Number(process.env.PORT); //sets a port as a number (previously a string, converted to a number). If port from user matches the port variables number, they can "communicate" (I think thats how ports work?).
   if (!port) //if there is any other variable declared at this point besides "port", the if-case shall be executed.
@@ -27,3 +26,5 @@ namespace L05_Server { 				//obvious
     _response.end(); //the server is told to stop doing anything until further action is taking place (Listeners).
   }
 }
+
+console.log(L05_Server);

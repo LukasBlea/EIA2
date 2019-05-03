@@ -36,9 +36,9 @@
 
         <fieldset id="radio">
             <legend> Waffel oder Becher </legend>
-            <input type="radio" name="Waffel oder Becher" value="5" id="Becher" required />
+            <input type="radio" name="Waffel oder Becher" value="0" id="Becher" required />
             <label for="Becher">im Becher</label>
-            <input type="radio" name="Waffel oder Becher" value="2" id="Waffel" required />
+            <input type="radio" name="Waffel oder Becher" value="0" id="Waffel" required />
             <label for="Waffel">in der Waffel</label>
         </fieldset>
 
@@ -53,9 +53,9 @@
             <input type="text" name="Name" pattern="[A-Z a-z]{3,}" placeholder="Nicolas Cage" lieferdaten="true"required /><br />
             Straße und Hausnummer<br />
             <input type="text" name="Straße" pattern="[A-Z a-z]{6,}" placeholder="San Vicente Blvd" lieferdaten="true" required />
-            <input type="text" name="Hausnummer" pattern="[0-9]{1,2}" placeholder="24" lieferdaten="true" required />
+            <input type="text" name="Hausnummer" pattern="[A-Z a-z 0-9]{1,2}" placeholder="24" lieferdaten="true" required />
             <br />Ort und PLZ<br />
-            <input type="text" name="Ort" placeholder="California" lieferdaten="true" required /> 
+            <input type="text" name="Ort" pattern="[A-Z a-z]{3,}" placeholder="California" lieferdaten="true" required /> 
             <input type="text" name="PLZ" pattern="[0-9]{5}" placeholder="78120" lieferdaten="true" required />
             <hr>
             <fieldset id="radio">
@@ -73,7 +73,7 @@
         </fieldset>
 
     </div>
-    <button type="submit">Formular abschicken</button>
+    <button type="submit" id="formular">Formular abschicken</button>
     </form>
 
 </body>

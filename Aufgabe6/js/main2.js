@@ -5,14 +5,46 @@ var Aufgabe05;
     function init(_event) {
         let fieldsets = document.getElementsByTagName("fieldset");
         document.getElementById("button").addEventListener("click", pressedButton);
+        document.getElementById("formular").addEventListener("click", formularSenden);
         for (let i = 0; i < fieldsets.length; i++) {
             let fieldset = fieldsets[i];
             fieldset.addEventListener("change", eisBerechnen);
         }
         displayFlexiblesEis(Aufgabe05.eis);
     }
+    function formularSenden(_event) {
+        let inputs = document.getElementsByTagName("input");
+        for (let i = 0; i < inputs.length; i++) {
+            let input = inputs[i];
+            if (input.checked == true) {
+                input.setAttribute("value", "1");
+                switch (input.id) {
+                    case ("Becher"):
+                        {
+                            input.setAttribute("value", "Becher");
+                        }
+                        break;
+                    case ("Waffel"):
+                        {
+                            input.setAttribute("value", "Waffel");
+                        }
+                        break;
+                    case ("Selbstabholung"):
+                        {
+                            input.setAttribute("value", "Selbstabholung");
+                        }
+                        break;
+                    case ("DHL"): {
+                        input.setAttribute("value", "DHL");
+                    }
+                }
+            }
+            else {
+                input.setAttribute("value", "0");
+            }
+        }
+    }
     function pressedButton(_event) {
-        console.log("Hallo Eli");
         let inputs = document.getElementsByTagName("input");
         for (let i = 0; i < inputs.length; i++) {
             let input = inputs[i];
@@ -47,6 +79,7 @@ var Aufgabe05;
                 let post2 = document.createElement("span");
                 post2.innerHTML = " | " + `${inputs[i].id}`;
                 document.getElementById("overview").appendChild(post2);
+                continue;
             }
             gesamtpreis = eispreis;
         }
