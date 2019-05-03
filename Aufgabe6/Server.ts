@@ -1,5 +1,6 @@
 import * as Http from "http"; //creating a HTTP object in the code, interpreter looks for each possible import in the http module and append it to the http object in the code
 
+
 namespace L05_Server { 				//obvious
   console.log("Starting server"); 	//obvious
   let port: number = Number(process.env.PORT); //sets a port as a number (previously a string, converted to a number). If port from user matches the port variables number, they can "communicate" (I think thats how ports work?).
