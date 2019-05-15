@@ -94,15 +94,17 @@ var Aufgabe05;
         for (let eiskey in _homogeneseisarray) {
             let zwischenspeicher = _homogeneseisarray[eiskey];
             for (let i = 0; i < zwischenspeicher.length; i++) {
-                eisGenerierung(zwischenspeicher[i]);
+                eisGenerierung(zwischenspeicher[i], eiskey);
             }
         }
     }
-    function eisGenerierung(_heteroPredefinedEis) {
+    function eisGenerierung(_heteroPredefinedEis, _eiskey) {
         let input = document.createElement("input");
         let label = document.createElement("label");
         label.setAttribute("for", _heteroPredefinedEis.eisname);
         label.innerText = " x " + _heteroPredefinedEis.eisname;
+        if (_eiskey == "Eissorten")
+            input.setAttribute("checked", "checked");
         input.setAttribute("type", _heteroPredefinedEis.type);
         input.setAttribute("name", _heteroPredefinedEis.name);
         input.setAttribute("step", _heteroPredefinedEis.step);

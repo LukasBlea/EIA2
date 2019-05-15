@@ -1,36 +1,23 @@
 var L06_SendData;
 (function (L06_SendData) {
-    window.addEventListener("load", asynchronerButton);
-    let address = "http://localhost:8100";
-    function asynchronerButton(_event) {
-        let asynchronButton = document.getElementById("button");
-        asynchronButton.addEventListener("click", asynchronerAblauf);
+    window.addEventListener("load", init);
+    let address = "https://lukasblea-server.herokuapp.com/";
+    function init(_event) {
+        document.getElementById("test").addEventListener("click", buttonEvent);
     }
-    function asynchronerAblauf(_event) {
-        let input = document.getElementsByTagName("input");
-        let vorwahl = "?";
-        for (let i = 0; i < input.length; i++) {
-            if (input[i].value != "" && input[i].value != "0") {
-                vorwahl = vorwahl + input[i].name + " = " + input[i].value + "&";
-            }
-            switch (input[i].value) {
-                case ("Selbstabholung"):
-                    if (input[i].checked == true) {
-                        vorwahl = vorwahl + input[i].name + " = " + input[i].value + "&";
-                    }
-                    break;
-                case ("DHL"):
-                    if (input[i].checked == true) {
-                        vorwahl = vorwahl + input[i].name + " = " + input[i].value + "&";
-                    }
-                    break;
+    function buttonEvent(_event) {
+        let inputs = document.getElementsByTagName("input");
+        let urlgenerieren = "?";
+        for (let i = 0; i < inputs.length; i++) {
+            if (inputs[i].value != "0" && inputs[i].value != "" && inputs[i].checked == true) {
+                urlgenerieren = urlgenerieren + inputs[i].name + "=" + inputs[i].value + "&";
             }
         }
-        sendRequestWithCustomData(vorwahl);
+        sendRequestWithCustomData(urlgenerieren);
     }
-    function sendRequestWithCustomData(_vorwahl) {
+    function sendRequestWithCustomData(_url) {
         let xhr = new XMLHttpRequest();
-        xhr.open("GET", address + _vorwahl, true);
+        xhr.open("GET", address + _url, true);
         xhr.addEventListener("readystatechange", handleStateChange);
         xhr.send();
     }

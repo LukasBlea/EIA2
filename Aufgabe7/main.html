@@ -26,7 +26,7 @@
 
 
 <body>
-    <form action="https://lukasblea-server.herokuapp.com" method="GET">
+    <form action="https://lukasblea-server.herokuapp.com/" method="GET">
 
     <div>
         <h1>Eisdealer🍦😎</h1>
@@ -37,34 +37,34 @@
 
         <fieldset id="radio">
             <legend> Waffel oder Becher </legend>
-            <input type="radio" name="Waffel oder Becher" value="0" id="Becher" required />
+            <input type="radio" name="Waffel oder Becher" value="Becher" id="Becher" required />
             <label for="Becher">im Becher</label>
-            <input type="radio" name="Waffel oder Becher" value="0" id="Waffel" required />
+            <input type="radio" name="Waffel oder Becher" value="Waffel" id="Waffel" required />
             <label for="Waffel">in der Waffel</label>
         </fieldset>
 
         <fieldset id="text">
             <legend> Kommentar </legend>
-            <textarea name="Kommantar" cols="38" rows="9" placeholder="you yee'd your last haw, frend 🤠"></textarea>
+            <textarea name="Kommantar" cols="38" rows="9" placeholder="you yee'd your last haw, frend 🤠" checked></textarea>
         </fieldset>
 
         <fieldset id="text">
             <legend> Lieferdaten </legend>
             Name<br />
-            <input type="text" name="Name" pattern="[A-Z a-z]{3,}" placeholder="Nicolas Cage" lieferdaten="true"required /><br />
+            <input type="text" name="Name" pattern="[A-Z a-z]{3,}" placeholder="Nicolas Cage" lieferdaten="true" checked required /><br />
             Straße und Hausnummer<br />
-            <input type="text" name="Straße" pattern="[A-Z a-z]{6,}" placeholder="San Vicente Blvd" lieferdaten="true" required />
-            <input type="text" name="Hausnummer" pattern="[A-Z a-z 0-9]{1,2}" placeholder="24" lieferdaten="true" required />
+            <input type="text" name="Straße" pattern="[A-Z a-z]{6,}" placeholder="San Vicente Blvd" lieferdaten="true" checked required />
+            <input type="text" name="Hausnummer" pattern="[A-Z a-z 0-9]{1,2}" placeholder="24" lieferdaten="true" checked required />
             <br />Ort und PLZ<br />
-            <input type="text" name="Ort" pattern="[A-Z a-z]{3,}" placeholder="California" lieferdaten="true" required /> 
-            <input type="text" name="PLZ" pattern="[0-9]{5}" placeholder="78120" lieferdaten="true" required />
+            <input type="text" name="Ort" pattern="[A-Z a-z]{3,}" placeholder="California" lieferdaten="true" checked required /> 
+            <input type="text" name="PLZ" pattern="[0-9]{5}" placeholder="78120" lieferdaten="true" checked required />
             <hr>
             <fieldset id="radio">
                 <legend>Bestelloptionen</legend>
-                <input type="radio" name="Lieferoption" value="Selbstabholung" id="lieferservice1" />
-                <label for="lieferservice1">Selbstabholung</label>
-                <input type="radio" name="Lieferoption" value="DHL" id="lieferservice2" />
-                <label for="lieferservice2">DHL</label>
+                <input type="radio" name="Lieferoption" value="Selbstabholung" id="Selbstabholung" />
+                <label for="Selbstabholung">Selbstabholung</label>
+                <input type="radio" name="Lieferoption" value="DHL" id="DHL" />
+                <label for="DHL">DHL</label>
             </fieldset>
         </fieldset>
 
@@ -81,6 +81,7 @@
 
 <footer>
 
+    <button id="test">Asynchrone Anzeige</button>
     <div id="overview">
     </div>
 

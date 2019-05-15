@@ -1,38 +1,27 @@
 namespace L06_SendData {
-    window.addEventListener("load", asynchronerButton);
-    let address: string = "http://localhost:8100";
 
-    function asynchronerButton(_event: Event): void {
-        let asynchronButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("button");
-        asynchronButton.addEventListener("click", asynchronerAblauf);
+    window.addEventListener("load", init);
+
+    let address: string = "https://lukasblea-server.herokuapp.com/";
+
+    function init(_event: Event): void {
+        document.getElementById("test").addEventListener("click", buttonEvent);
     }
 
-    function asynchronerAblauf(_event: Event): void {
-        let input: HTMLCollectionOf<HTMLInputElement> = document.getElementsByTagName("input");
-        let vorwahl: string = "?";
-        for (let i: number = 0; i < input.length; i++) {
-            if (input[i].value != "" && input[i].value != "0") {
-                vorwahl = vorwahl + input[i].name + " = " + input[i].value + "&";
-            }
-            switch (input[i].value) {
-                case ("Selbstabholung") :
-                if (input[i].checked == true) {
-                    vorwahl = vorwahl + input[i].name + " = " + input[i].value + "&";
-                }
-                break;
-                case ("DHL") :
-                if (input[i].checked == true) {
-                    vorwahl = vorwahl + input[i].name + " = " + input[i].value + "&";
-                }
-                break; 
+    function buttonEvent(_event: Event): void {
+        let inputs: HTMLCollectionOf<HTMLInputElement> = document.getElementsByTagName("input");
+        let urlgenerieren: string = "?";
+        for (let i: number = 0; i < inputs.length; i++) {
+            if (inputs[i].value != "0" && inputs[i].value != "" && inputs[i].checked == true) {
+                urlgenerieren = urlgenerieren + inputs[i].name + "=" + inputs[i].value + "&";
             }
         }
-        sendRequestWithCustomData(vorwahl);
+        sendRequestWithCustomData(urlgenerieren);
     }
 
-    function sendRequestWithCustomData(_vorwahl: string): void {
+    function sendRequestWithCustomData(_url: string): void {
         let xhr: XMLHttpRequest = new XMLHttpRequest();
-        xhr.open("GET", address + _vorwahl, true);
+        xhr.open("GET", address + _url, true);
         xhr.addEventListener("readystatechange", handleStateChange);
         xhr.send();
     }

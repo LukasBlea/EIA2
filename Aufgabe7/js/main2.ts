@@ -113,16 +113,17 @@ namespace Aufgabe05 {
         for (let eiskey in _homogeneseisarray) {
             let zwischenspeicher: PredefinedEis[] = _homogeneseisarray[eiskey];
             for (let i: number = 0; i < zwischenspeicher.length; i++) {
-                eisGenerierung(zwischenspeicher[i]);
+                eisGenerierung(zwischenspeicher[i], eiskey);
             }
         }
     }
 
-    function eisGenerierung(_heteroPredefinedEis: PredefinedEis): void {
+    function eisGenerierung(_heteroPredefinedEis: PredefinedEis, _eiskey: string): void {
         let input: HTMLInputElement = document.createElement("input");
         let label: HTMLLabelElement = document.createElement("label");
         label.setAttribute("for", _heteroPredefinedEis.eisname);
         label.innerText = " x " + _heteroPredefinedEis.eisname;
+        if (_eiskey == "Eissorten") input.setAttribute("checked", "checked");
         input.setAttribute("type", _heteroPredefinedEis.type);
         input.setAttribute("name", _heteroPredefinedEis.name);
         input.setAttribute("step", _heteroPredefinedEis.step);
