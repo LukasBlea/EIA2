@@ -20,14 +20,8 @@ namespace Aufgabe05 {
     let gesamtpreis: number = 0;
 
     function init(_event: Event): void {
-
-        let fieldsets: HTMLCollectionOf<HTMLFieldSetElement> = document.getElementsByTagName("fieldset");
         document.getElementById("button").addEventListener("click", pressedButton);
         document.getElementById("formular").addEventListener("click", formularSenden);
-        for (let i: number = 0; i < fieldsets.length; i++) {
-            let fieldset: HTMLFieldSetElement = fieldsets[i];
-            fieldset.addEventListener("change", eisBerechnen);
-        }
         displayFlexiblesEis(eis);
     }
 
@@ -36,7 +30,6 @@ namespace Aufgabe05 {
         for (let i: number = 0; i < inputs.length; i++) {
             let input: HTMLInputElement = inputs[i];
             if (input.checked == true) {
-                input.setAttribute("value", "1");
                 switch (input.id) {
                     case ("Becher"): {
                         input.setAttribute("value", "Becher");
@@ -54,9 +47,7 @@ namespace Aufgabe05 {
                         input.setAttribute("value", "DHL");
                     }
                 }
-            } else {
-                input.setAttribute("value", "0");
-            }
+            } 
         }
     }
 
@@ -74,41 +65,6 @@ namespace Aufgabe05 {
         }
     }
 
-    function eisBerechnen(_event: Event): void {
-        gesamtpreis = 0;
-        let eispreis: number = 0;
-        document.getElementById("overview").innerHTML = "";
-        let inputs: HTMLCollectionOf<HTMLInputElement> = document.getElementsByTagName("input");
-        for (let i: number = 0; i < inputs.length; i++) {
-            if (Number(inputs[i].value) && inputs[i].type == "number") {
-                let kugelanzahl: number = Number(inputs[i].value);
-                let kugelpreis: number = Number(inputs[i].alt);
-                eispreis = eispreis + kugelanzahl * kugelpreis;
-                let post: HTMLSpanElement = document.createElement("span");
-                post.innerHTML = " | " + `${inputs[i].value} x  ${inputs[i].id}`;
-                document.getElementById("overview").appendChild(post);
-                continue;
-            }
-            if (inputs[i].checked == true) {
-                let toppingpreis: number = Number(inputs[i].alt);
-                eispreis = eispreis + toppingpreis;
-                let post2: HTMLSpanElement = document.createElement("span");
-                post2.innerHTML = " | " + `${inputs[i].id}`;
-                document.getElementById("overview").appendChild(post2);
-                continue;
-            }
-            gesamtpreis = eispreis;
-        }
-        preisAnzeigen(gesamtpreis);
-    }
-
-    function preisAnzeigen(_gesamtpreis: number): void {
-        let anzeigepreis: HTMLParagraphElement = document.createElement("p");
-        anzeigepreis.innerHTML = "Gesamtpreis ihrer Bestellung: " + _gesamtpreis.toFixed(2) + "€";
-        document.getElementById("overview").appendChild(anzeigepreis);
-
-    }
-
     function displayFlexiblesEis(_homogeneseisarray: HomogenesEisArray): void {
         for (let eiskey in _homogeneseisarray) {
             let zwischenspeicher: PredefinedEis[] = _homogeneseisarray[eiskey];
@@ -122,8 +78,10 @@ namespace Aufgabe05 {
         let input: HTMLInputElement = document.createElement("input");
         let label: HTMLLabelElement = document.createElement("label");
         label.setAttribute("for", _heteroPredefinedEis.eisname);
-        label.innerText = " x " + _heteroPredefinedEis.eisname;
-        if (_eiskey == "Eissorten") input.setAttribute("checked", "checked");
+        label.innerText = " " + _heteroPredefinedEis.eisname;
+        if (_eiskey == "Eissorten") {
+            input.setAttribute("checked", "checked");
+        }
         input.setAttribute("type", _heteroPredefinedEis.type);
         input.setAttribute("name", _heteroPredefinedEis.name);
         input.setAttribute("step", _heteroPredefinedEis.step);

@@ -3,13 +3,8 @@ var Aufgabe05;
     window.addEventListener("load", init);
     let gesamtpreis = 0;
     function init(_event) {
-        let fieldsets = document.getElementsByTagName("fieldset");
         document.getElementById("button").addEventListener("click", pressedButton);
         document.getElementById("formular").addEventListener("click", formularSenden);
-        for (let i = 0; i < fieldsets.length; i++) {
-            let fieldset = fieldsets[i];
-            fieldset.addEventListener("change", eisBerechnen);
-        }
         displayFlexiblesEis(Aufgabe05.eis);
     }
     function formularSenden(_event) {
@@ -17,7 +12,6 @@ var Aufgabe05;
         for (let i = 0; i < inputs.length; i++) {
             let input = inputs[i];
             if (input.checked == true) {
-                input.setAttribute("value", "1");
                 switch (input.id) {
                     case ("Becher"):
                         {
@@ -39,9 +33,6 @@ var Aufgabe05;
                     }
                 }
             }
-            else {
-                input.setAttribute("value", "0");
-            }
         }
     }
     function pressedButton(_event) {
@@ -58,38 +49,6 @@ var Aufgabe05;
             }
         }
     }
-    function eisBerechnen(_event) {
-        gesamtpreis = 0;
-        let eispreis = 0;
-        document.getElementById("overview").innerHTML = "";
-        let inputs = document.getElementsByTagName("input");
-        for (let i = 0; i < inputs.length; i++) {
-            if (Number(inputs[i].value) && inputs[i].type == "number") {
-                let kugelanzahl = Number(inputs[i].value);
-                let kugelpreis = Number(inputs[i].alt);
-                eispreis = eispreis + kugelanzahl * kugelpreis;
-                let post = document.createElement("span");
-                post.innerHTML = " | " + `${inputs[i].value} x  ${inputs[i].id}`;
-                document.getElementById("overview").appendChild(post);
-                continue;
-            }
-            if (inputs[i].checked == true) {
-                let toppingpreis = Number(inputs[i].alt);
-                eispreis = eispreis + toppingpreis;
-                let post2 = document.createElement("span");
-                post2.innerHTML = " | " + `${inputs[i].id}`;
-                document.getElementById("overview").appendChild(post2);
-                continue;
-            }
-            gesamtpreis = eispreis;
-        }
-        preisAnzeigen(gesamtpreis);
-    }
-    function preisAnzeigen(_gesamtpreis) {
-        let anzeigepreis = document.createElement("p");
-        anzeigepreis.innerHTML = "Gesamtpreis ihrer Bestellung: " + _gesamtpreis.toFixed(2) + "€";
-        document.getElementById("overview").appendChild(anzeigepreis);
-    }
     function displayFlexiblesEis(_homogeneseisarray) {
         for (let eiskey in _homogeneseisarray) {
             let zwischenspeicher = _homogeneseisarray[eiskey];
@@ -102,9 +61,10 @@ var Aufgabe05;
         let input = document.createElement("input");
         let label = document.createElement("label");
         label.setAttribute("for", _heteroPredefinedEis.eisname);
-        label.innerText = " x " + _heteroPredefinedEis.eisname;
-        if (_eiskey == "Eissorten")
+        label.innerText = " " + _heteroPredefinedEis.eisname;
+        if (_eiskey == "Eissorten") {
             input.setAttribute("checked", "checked");
+        }
         input.setAttribute("type", _heteroPredefinedEis.type);
         input.setAttribute("name", _heteroPredefinedEis.name);
         input.setAttribute("step", _heteroPredefinedEis.step);

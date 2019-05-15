@@ -1,7 +1,7 @@
 var L06_SendData;
 (function (L06_SendData) {
     window.addEventListener("load", init);
-    let address = "https://lukasblea-server.herokuapp.com/";
+    let address = "http://localhost:8100/";
     function init(_event) {
         document.getElementById("test").addEventListener("click", buttonEvent);
     }

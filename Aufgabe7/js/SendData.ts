@@ -2,7 +2,7 @@ namespace L06_SendData {
 
     window.addEventListener("load", init);
 
-    let address: string = "https://lukasblea-server.herokuapp.com/";
+    let address: string = "http://localhost:8100/";
 
     function init(_event: Event): void {
         document.getElementById("test").addEventListener("click", buttonEvent);
