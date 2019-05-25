@@ -24,10 +24,10 @@ namespace DBClient {
     }
 
     function search (_event: Event): void {
-        let inputs: HTMLInputElement = <HTMLInputElement>document.getElementById("search2");
+        let input: HTMLInputElement = <HTMLInputElement>document.getElementById("search2");
         let query: string = "command=suche";
-        query += "&search" + inputs.value;
-        console.log("Test Martikelnummer search funktion");
+        query += "&search" + input.value;
+        console.log("Test Matrikelnummer search funktion");
         sendRequest(query, handleFindResponse);
     }
 

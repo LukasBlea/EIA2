@@ -21,10 +21,10 @@ var DBClient;
         sendRequest(query, handleInsertResponse);
     }
     function search(_event) {
-        let inputs = document.getElementById("search2");
+        let input = document.getElementById("search2");
         let query = "command=suche";
-        query += "&search" + inputs.value;
-        console.log("Test Martikelnummer search funktion");
+        query += "&search" + input.value;
+        console.log("Test Matrikelnummer search funktion");
         sendRequest(query, handleFindResponse);
     }
     function refresh(_event) {
