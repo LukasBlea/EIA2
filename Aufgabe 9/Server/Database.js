@@ -55,16 +55,13 @@ function findAll(_callback) {
 }
 exports.findAll = findAll;
 function find(_callback, _martrikelnummer) {
-    console.log("test");
     let cursor = students.find({ "martikel": _martrikelnummer });
     cursor.toArray(prepareAnswer);
     function prepareAnswer(_e, studentArray) {
-        if (_e) {
+        if (_e)
             _callback("Error" + _e);
-        }
-        else {
+        else
             _callback(JSON.stringify(studentArray));
-        }
     }
 }
 exports.find = find;

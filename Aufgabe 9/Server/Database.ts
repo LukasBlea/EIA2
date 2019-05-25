@@ -61,14 +61,12 @@ export function findAll(_callback: Function): void {
 }
 
 export function find(_callback: Function, _martrikelnummer: number): void {
-    console.log("test");
     let cursor: Mongo.Cursor = students.find({"martikel": _martrikelnummer});
     cursor.toArray(prepareAnswer);
     function prepareAnswer(_e: Mongo.MongoError, studentArray: StudentData[]): void {
-        if (_e) {
+        if (_e) 
             _callback("Error" + _e);
-        } else {
+         else 
             _callback(JSON.stringify(studentArray));
-        }
     }
 }
