@@ -23,7 +23,7 @@ namespace DBClient {
         sendRequest(query, handleInsertResponse);
     }
 
-    function search (_event: Event): void {
+    function search(_event: Event): void {
         let input: HTMLInputElement = <HTMLInputElement>document.getElementById("search2");
         let query: string = "command=suche";
         query += "&search" + input.value;
