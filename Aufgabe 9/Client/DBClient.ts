@@ -25,7 +25,7 @@ namespace DBClient {
 
     function search (_event: Event): void {
         let inputs: HTMLInputElement = <HTMLInputElement>document.getElementById("search2");
-        let query: string = "command=search";
+        let query: string = "command=suche";
         query += "&search" + inputs.value;
         console.log("Test Martikelnummer search funktion");
         sendRequest(query, handleFindResponse);
@@ -55,8 +55,6 @@ namespace DBClient {
         if (xhr.readyState == XMLHttpRequest.DONE) {
             let output: HTMLTextAreaElement = document.getElementsByTagName("textarea")[0];
             output.value = xhr.response;
-            let responseAsJson: JSON = JSON.parse(xhr.response);
-            console.log(responseAsJson);
         }
     }
 }

@@ -61,7 +61,8 @@ export function findAll(_callback: Function): void {
 }
 
 export function findStudentMartikelnummer(_callback: Function, _martrikelnummer: number): void {
-    let cursor: Mongo.Cursor = students.find({ "martikelnummer": _martrikelnummer });
+    console.log("test");
+    let cursor: Mongo.Cursor = students.find({ "martikel": _martrikelnummer });
     cursor.toArray(prepareAnswer);
     function prepareAnswer(_e: Mongo.MongoError, studentArray: StudentData[]): void {
         if (_e) {

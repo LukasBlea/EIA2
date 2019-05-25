@@ -41,7 +41,7 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
             Database.insert(student);
             respond(_response, "storing data");
             break;
-        case "search":
+        case "suche":
             let search: number = parseInt(query["search"]);
             Database.findStudentMartikelnummer(findCallback, search);
             break;
