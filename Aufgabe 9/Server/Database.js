@@ -54,7 +54,7 @@ function findAll(_callback) {
     }
 }
 exports.findAll = findAll;
-function findStudentMartikelnummer(_callback, _martrikelnummer) {
+function find(_callback, _martrikelnummer) {
     console.log("test");
     let cursor = students.find({ "martikel": _martrikelnummer });
     cursor.toArray(prepareAnswer);
@@ -67,5 +67,5 @@ function findStudentMartikelnummer(_callback, _martrikelnummer) {
         }
     }
 }
-exports.findStudentMartikelnummer = findStudentMartikelnummer;
+exports.find = find;
 //# sourceMappingURL=Database.js.map

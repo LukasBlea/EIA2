@@ -5,10 +5,10 @@ var DBClient;
     function init(_event) {
         console.log("Init");
         let insertButton = document.getElementById("insert");
-        let searchButton = document.getElementById("search");
+        let findButton = document.getElementById("find");
         let refreshButton = document.getElementById("refresh");
         insertButton.addEventListener("click", insert);
-        searchButton.addEventListener("click", search);
+        findButton.addEventListener("click", filter);
         refreshButton.addEventListener("click", refresh);
     }
     function insert(_event) {
@@ -20,9 +20,9 @@ var DBClient;
         console.log(query);
         sendRequest(query, handleInsertResponse);
     }
-    function search(_event) {
-        let input = document.getElementById("search2");
-        let query = "command=suche";
+    function filter(_event) {
+        let input = document.getElementById("daten");
+        let query = "command=filter";
         query += "&search" + input.value;
         console.log("Test Matrikelnummer search funktion");
         sendRequest(query, handleFindResponse);

@@ -5,10 +5,10 @@ namespace DBClient {
     function init(_event: Event): void {
         console.log("Init");
         let insertButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("insert");
-        let searchButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("search");
+        let findButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("find");
         let refreshButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("refresh");
         insertButton.addEventListener("click", insert);
-        searchButton.addEventListener("click", search);
+        findButton.addEventListener("click", filter);
         refreshButton.addEventListener("click", refresh);
         
     }
@@ -23,9 +23,9 @@ namespace DBClient {
         sendRequest(query, handleInsertResponse);
     }
 
-    function search(_event: Event): void {
-        let input: HTMLInputElement = <HTMLInputElement>document.getElementById("search2");
-        let query: string = "command=suche";
+    function filter(_event: Event): void {
+        let input: HTMLInputElement = <HTMLInputElement>document.getElementById("daten");
+        let query: string = "command=filter";
         query += "&search" + input.value;
         console.log("Test Matrikelnummer search funktion");
         sendRequest(query, handleFindResponse);
