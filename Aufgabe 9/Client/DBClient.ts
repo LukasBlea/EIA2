@@ -26,7 +26,7 @@ namespace DBClient {
     function filter(_event: Event): void {
         let input: HTMLInputElement = <HTMLInputElement>document.getElementById("daten");
         let query: string = "command=filter";
-        query += "&search" + input.value;
+        query += "&suche" + input.value;
         console.log("Test Matrikelnummer search funktion");
         sendRequest(query, handleFindResponse);
     }

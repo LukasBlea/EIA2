@@ -23,7 +23,7 @@ var DBClient;
     function filter(_event) {
         let input = document.getElementById("daten");
         let query = "command=filter";
-        query += "&search" + input.value;
+        query += "&suche" + input.value;
         console.log("Test Matrikelnummer search funktion");
         sendRequest(query, handleFindResponse);
     }
