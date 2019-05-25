@@ -1,28 +1,25 @@
+"use strict";
 /**
  * Simple database insertion and query for MongoDB
  * @author: Jirka Dell'Oro-Friedl
  * @adapted: Lukas Scheuerle
  */
-
-import * as Mongo from "mongodb";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Mongo = require("mongodb");
 console.log("Database starting");
-
-let databaseURL: string = "mongodb://localhost:27017";
-let databaseName: string = "Test";
-let db: Mongo.Db;
-let students: Mongo.Collection;
-
+let databaseURL = "mongodb://localhost:27017";
+let databaseName = "Test";
+let db;
+let students;
 // running on heroku?
 if (process.env.NODE_ENV == "production") {
     databaseURL = "mongodb+srv://LukasBlea:dTC3Wf5CQHUn45Ye@lukasblea-owo-b38vk.mongodb.net/Aufgabe-9";
     databaseName = "Studentenanmeldung";
 }
-
 // try to connect to database, then activate callback "handleConnect" 
 Mongo.MongoClient.connect(databaseURL, { connectTimeoutMS: 8000 }, handleConnect);
-
 // connect-handler receives two standard parameters, an error object and a database client object
-function handleConnect(_e: Mongo.MongoError, _client: Mongo.MongoClient): void {
+function handleConnect(_e, _client) {
     if (_e)
         console.log("Unable to connect to database, error: ", _e);
     else {
@@ -31,27 +28,24 @@ function handleConnect(_e: Mongo.MongoError, _client: Mongo.MongoClient): void {
         students = db.collection("students");
     }
 }
-
-export function insert(_doc: StudentData): void {
+function insert(_doc) {
     // try insertion then activate callback "handleInsert"
     students.insertOne(_doc, handleInsert);
 }
-
+exports.insert = insert;
 // insertion-handler receives an error object as standard parameter
-function handleInsert(_e: Mongo.MongoError): void {
+function handleInsert(_e) {
     console.log("Database insertion returned -> " + _e);
 }
-
 // try to fetch all documents from database, then activate callback
-export function findAll(_callback: Function): void {
+function findAll(_callback) {
     // cursor points to the retreived set of documents in memory
-    var cursor: Mongo.Cursor = students.find();
+    var cursor = students.find();
     // try to convert to array, then activate callback "prepareAnswer"
     cursor.toArray(prepareAnswer);
-
     // toArray-handler receives two standard parameters, an error object and the array
     // implemented as inner function, so _callback is in scope
-    function prepareAnswer(_e: Mongo.MongoError, studentArray: StudentData[]): void {
+    function prepareAnswer(_e, studentArray) {
         if (_e)
             _callback("Error" + _e);
         else
@@ -59,14 +53,19 @@ export function findAll(_callback: Function): void {
             _callback(JSON.stringify(studentArray));
     }
 }
-
-export function find(_callback: Function, _martrikelnummer: number): void {
-    let cursor: Mongo.Cursor = students.find({"martikel": _martrikelnummer});
+exports.findAll = findAll;
+function findStudentMartikelnummer(_callback, _martrikelnummer) {
+    console.log("test");
+    let cursor = students.find({ "martikel": _martrikelnummer });
     cursor.toArray(prepareAnswer);
-    function prepareAnswer(_e: Mongo.MongoError, studentArray: StudentData[]): void {
-        if (_e) 
+    function prepareAnswer(_e, studentArray) {
+        if (_e) {
             _callback("Error" + _e);
-         else 
+        }
+        else {
             _callback(JSON.stringify(studentArray));
+        }
     }
 }
+exports.findStudentMartikelnummer = findStudentMartikelnummer;
+//# sourceMappingURL=Database.js.map
