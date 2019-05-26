@@ -8,7 +8,7 @@ var DBClient;
         let searchButton = document.getElementById("search");
         let refreshButton = document.getElementById("refresh");
         insertButton.addEventListener("click", insert);
-        searchButton.addEventListener("click", search);
+        searchButton.addEventListener("click", searchNummer);
         refreshButton.addEventListener("click", refresh);
     }
     function insert(_event) {
@@ -20,8 +20,8 @@ var DBClient;
         console.log(query);
         sendRequest(query, handleInsertResponse);
     }
-    function search(_event) {
-        let input = document.getElementById("search2");
+    function searchNummer(_event) {
+        let input = document.getElementById("eingabematrikel");
         let query = "command=suche";
         query += "&search" + input.value;
         console.log("Test Matrikelnummer search funktion");
