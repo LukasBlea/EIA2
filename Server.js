@@ -34,8 +34,8 @@ function handleRequest(_request, _response) {
             respond(_response, "storing data");
             break;
         case "suche":
-            let search = parseInt(query["search"]);
-            Database.findStudentMartikelnummer(findCallback, search);
+            let find = parseInt(query["search"]);
+            Database.findStudentMatrikelnummer(findCallback, find);
             break;
         case "refresh":
             Database.findAll(findCallback);
