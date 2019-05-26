@@ -13,8 +13,8 @@ let db;
 let students;
 // running on heroku?
 if (process.env.NODE_ENV == "production") {
-    databaseURL = "mongodb+srv://LukasBlea:dTC3Wf5CQHUn45Ye@lukasblea-owo-b38vk.mongodb.net/Aufgabe-9";
-    databaseName = "Studentenanmeldung";
+    databaseURL = "mongodb+srv://LukasBlea:NSF6lSX7Wmvjt9t7@lukasblea-owo-b38vk.mongodb.net/Studentenanmeldung";
+    databaseName = "students";
 }
 // try to connect to database, then activate callback "handleConnect" 
 Mongo.MongoClient.connect(databaseURL, { connectTimeoutMS: 8000 }, handleConnect);
