@@ -33,8 +33,8 @@ namespace Aufgabe11 {
         for (let i: number = 0; i < 13; i++) {
             let x: number = Math.random() * canvas.width;
             let y: number = Math.random() * 800;
-            let dx: number = (Math.random() * -0.5);
-            let dy: number = (Math.random() * -0.5);
+            let dx: number = -5;
+            let dy: number = Math.random() * -0.5;
             let radius: number = Math.min(80) * Math.random();
             let blasen: Blasen;
             blasen = new Blasen();

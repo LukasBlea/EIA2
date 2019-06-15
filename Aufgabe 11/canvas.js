@@ -31,8 +31,8 @@ var Aufgabe11;
         for (let i = 0; i < 13; i++) {
             let x = Math.random() * canvas.width;
             let y = Math.random() * 800;
-            let dx = (Math.random() * -0.5);
-            let dy = (Math.random() * -0.5);
+            let dx = -5;
+            let dy = Math.random() * -0.5;
             let radius = Math.min(80) * Math.random();
             let blasen;
             blasen = new Aufgabe11.Blasen();
