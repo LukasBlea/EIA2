@@ -30,7 +30,7 @@ function algenRandomizer() {
         let y = 850;
         algen(x, y);
     }
-    blasenRandomizer();
+    fischRandomizer();
 }
 function algen(_x, _y) {
     let algen = new Path2D();
@@ -52,15 +52,24 @@ function blasenRandomizer() {
         let x = Math.random() * canvas.width;
         let y = Math.random() * 800;
         let radius = Math.min(80) * Math.random();
-        blasen(x, y, radius);
+        let velocityX = 0;
+        let velocityY = 0;
+        velocityX += x;
+        velocityY += y;
+        blasen(x, y, radius, velocityX, velocityY);
     }
-    fischRandomizer();
 }
-function blasen(_x, _y, _radius) {
+function blasen(_x, _y, _radius, _velocityX, _velocityY) {
     let blasen = new Path2D();
     blasen.arc(_x, _y, _radius, 0, Math.PI * 2, false);
     crc.strokeStyle = "rgba(0, 0, 200, 0.2";
     crc.fillStyle = "rgba(0, 0, 200, 0.3";
+    if (_x + _radius > innerWidth || _x - _radius < 0) {
+        _velocityX = -_velocityX;
+    }
+    if (_y + _radius > innerHeight || _y - _radius < 0) {
+        _velocityY = -_velocityY;
+    }
     crc.fill(blasen);
     crc.stroke(blasen);
 }
@@ -113,6 +122,7 @@ function steinRandomizer() {
         let y = 885;
         stein(x, y);
     }
+    blasenRandomizer();
 }
 function stein(_x, _y) {
     let stein = new Path2D;
@@ -142,4 +152,5 @@ function stein(_x, _y) {
     crc.fillStyle = "black";
     crc.fill(krabbenAuge2);
 }
+blasenRandomizer();
 //# sourceMappingURL=canvas.js.map

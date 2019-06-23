@@ -34,7 +34,7 @@ function algenRandomizer(): void {
         let y: number = 850;
         algen(x, y);
     }
-    blasenRandomizer();
+    fischRandomizer();
 }
 
 function algen(_x: number, _y: number): void {
@@ -58,16 +58,25 @@ function blasenRandomizer(): void {
         let x: number = Math.random() * canvas.width;
         let y: number = Math.random() * 800;
         let radius: number = Math.min(80) * Math.random();
-        blasen(x, y, radius);
+        let velocityX: number = 0;
+        let velocityY: number = 0;
+        velocityX += x;
+        velocityY += y;
+        blasen(x, y, radius, velocityX, velocityY);
     }
-    fischRandomizer();
 }
 
-function blasen(_x: number, _y: number, _radius: number): void {
+function blasen(_x: number, _y: number, _radius: number, _velocityX: number, _velocityY: number): void {
     let blasen: Path2D = new Path2D();
     blasen.arc(_x, _y, _radius, 0, Math.PI * 2, false);
     crc.strokeStyle = "rgba(0, 0, 200, 0.2";
     crc.fillStyle = "rgba(0, 0, 200, 0.3";
+    if (_x + _radius > innerWidth || _x - _radius < 0) {
+        _velocityX = -_velocityX;
+    }
+    if (_y + _radius > innerHeight || _y - _radius < 0) {
+        _velocityY = -_velocityY;
+    }
     crc.fill(blasen);
     crc.stroke(blasen);
 }
@@ -123,6 +132,7 @@ function steinRandomizer(): void {
         let y: number = 885;
         stein(x, y);
     }
+    blasenRandomizer();
 }
 
 function stein(_x: number, _y: number): void {
@@ -153,3 +163,5 @@ function stein(_x: number, _y: number): void {
     crc.fillStyle = "black";
     crc.fill(krabbenAuge2);
 }
+
+blasenRandomizer();
